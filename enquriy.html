@@ -76,7 +76,11 @@
 
     <div class="container">
         <h2>School Admission Enquiry Form</h2>
-        <form id="enquiryForm" onsubmit="submitForm(event)">
+        <!-- ✅ Start of FormSubmit form -->
+        <form action="https://formsubmit.co/suhasaearlylearning@gmail.com" method="POST">
+            <!-- Hidden config -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
             
             <!-- Student Information -->
             <div class="form-section">
@@ -181,11 +185,6 @@
     </div>
 
     <script>
-        function submitForm(event) {
-            event.preventDefault();
-            alert("Enquiry submitted successfully!");
-            document.getElementById("enquiryForm").reset();
-        }
 
         document.addEventListener("DOMContentLoaded", () => {
             fetch('navbar.html')
