@@ -6,11 +6,17 @@
 }
 
 body {
-    font-family:'comic sans';
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     line-height: 1.8;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
     font-size: 20px;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: #333;
+    text-align: center;
 }
+
 
 
 
@@ -20,7 +26,8 @@ h2{
 
 
 h3{
-    font-family: 'comic sans'; 
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+
     color:orange;
 }
 /* Announcement Bar */
@@ -37,7 +44,8 @@ h3{
 .announcement-bar a {
     color: #007185;
     text-decoration: underline;
-    font-family: 'Schoolbell', cursive; 
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+
 }
 
 /* Navbar */
@@ -130,17 +138,20 @@ h3{
 .entry{
     
     
-        font-family:"comic sans";
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+
         font-size:27px;
     
 }
 .paragraph{
-    font-family: 'comic sans';
+   font-family: 'Comic Sans MS', cursive, sans-serif;
+
     font-size:25px;
 }
 .p{
    
-    font-family: 'comic sans';
+font-family: 'Comic Sans MS', cursive, sans-serif;
+
 }
 .school-intro{
     font-size: 2rem;
@@ -394,16 +405,7 @@ h3{
 
 
 
-body {
-    font-family: 'comic sans';
-    margin: 0;
-    padding: 0;
-    background:white;
-    color: #333;
-    text-align: center;
-    line-height: 1.8;
-    
-}
+
 /*programs offered */
 .title {
     font-size: 4rem;
