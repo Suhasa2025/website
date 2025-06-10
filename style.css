@@ -90,6 +90,17 @@ h3{
   
     
 }
+.hidden {
+  display: none;
+}
+
+#mobileMenu {
+  background: white;
+  position: absolute;
+  top: 60px; /* adjust as needed */
+  width: 100%;
+  text-align: center;
+}
 
 /* Navigation Links */
 .nav-links {
