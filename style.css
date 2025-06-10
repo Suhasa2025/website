@@ -145,6 +145,10 @@ h3{
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     z-index: 1001; /* Ensure dropdown is above other elements */
+     right: 0;
+    left: auto;
+    min-width: 150px;
+
 }
 .entry{
     
@@ -252,13 +256,19 @@ font-family: 'Comic Sans MS', cursive, sans-serif;
 
 /* Image Slider */
 .image-container { 
-    overflow: hidden;
+    overflow-x: hidden;
     display: flex;
     position: relative;
     justify-content: center;
     width: 100%; /* Full viewport width */
     max-height: 8000px; /* Increased height */
 }
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 
 .image-list {
     display: flex;
@@ -272,8 +282,9 @@ font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
 .image-item img {
-    width: 100vw; /* Full viewport width */
-    height: 100%;
+    width: 100%; /* Full viewport width */
+     max-width: 100%;
+    height:auto;
     object-fit: cover; /* Ensure full image is visible without gaps */
     transition: transform 0.5s;
 }
