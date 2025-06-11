@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suhasa School </title>
@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="logo.jpg" type="image/x-icon">
-
+    <link rel="icon" href="img/logo.jpg" type="image/x-icon">
+  </head>
 
 <body>
   <!-- This placeholder will load the navbar -->
@@ -22,34 +22,25 @@
         .then(response => response.text())
         .then(html => {
             document.getElementById('navbar-container').innerHTML = html;
-             
         });
 </script>
 
-
-   <div class="hamburger" onclick="toggleMenu()"></div>
-
-<nav id="mobileMenu" class="hidden">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</nav> 
+    
     <!--image slider-->
     
     <section>
      <div class="image-container">
          <div class="image-list">
     <div class="image-item">
-                <img src="slider1.jpg" />
+                <img src="img/slider1.jpg" />
             </div>
          
-            
             <div class="image-item">
-                <img src="image4.jpg" />
+                <img src="img/image4.jpg" />
             </div>
 
             <div class="image-item">
-                <img src="image5.jpg" />
+                <img src="img/image5.jpg" />
             </div>
             
             
@@ -98,9 +89,7 @@
             Each age group will focus on developing conversation, recognition/ reading,<br> and writing skills, alongside early math abilities, through engaging hands-on activities and projects tailored to their age and skill level."
         </bold>
           </p><br>
-        <p>
-        
-        </p>
+
         
      <a href="knowmorepage.html"  class="know-more-btn">Know More</a>
     </div>
@@ -122,7 +111,7 @@
     <div class="programs-container">
 
         <div class="program-card infant">
-            <img src="program1.jpg" alt="Parent & Me Program" class="program-image">
+            <img src="img/program1.jpg" alt="Parent & Me Program" class="program-image">
             <h2>DAYCARE</h2>
             <p class="paragraph">
               “Growing Minds, Nuturing Heart”
@@ -135,7 +124,7 @@
         </div>
 
         <div class="program-card toddler">
-            <img src="program2.jpg" alt="Toddler Program" class="program-image">
+            <img src="img/program2.jpg" alt="Toddler Program" class="program-image">
             <h2>PRE-KINDER GARTEN I&II</h2>
             <p class="paragraph">“Where Little Learner’s Begin Big Adventures”
               At SUHASA we nurture curious minds while setting the foundation for a lifetime of learning
@@ -147,7 +136,7 @@
         </div>
 
         <div class="program-card discovery">
-            <img src="program3 copy.jpg" alt="Early Years Program" class="program-image">
+            <img src="img/program3 copy.jpg" alt="Early Years Program" class="program-image">
             <h2>KINDER GARTEN I&II</h2>
             <p class="paragraph">“Stepping into a lifetime of discovery with little explorers learning to take big steps”
               At SUHASA we nurture curious minds and kind hearts in a world of discovery. Building tomorrow’s brightest stars through play, creativity and joy.
@@ -160,7 +149,7 @@
         </div>
 
         <div class="program-card preschool">
-            <img src="program4 copy.jpg" alt="Early Years Program" class="program-image">
+            <img src="img/program4 copy.jpg" alt="Early Years Program" class="program-image">
             <h2>SPECIAL  PROGRAM</h2>
             <p class="paragraph">Summer Camps: Engaging activities during summer to continue learning and social interaction.
 
@@ -170,7 +159,7 @@
         </div>
             
            <div class="program-card prekindergarten">
-                <img src="program5 copy 2.jpg" alt="Early Years Program" class="program-image">
+                <img src="img/program5 copy 2.jpg" alt="Early Years Program" class="program-image">
                 <h2>KINDER GARTEN<br>+4 YEARS</h2>
                 <p class="paragraph">Strengthening bonds around the classroom as part of a global community<br>
                   Target # of students:20 per class
@@ -181,7 +170,7 @@
            </div>
 
           <div class="program-card transitional">
-            <img src="babydrawingimg.jpg" alt="Early Years Program" class="program-image">
+            <img src="img/babydrawingimg.jpg" alt="Early Years Program" class="program-image">
             <h2>KINDER GARTEN <br>+5 YEARS </h2>
             <p class="paragraph">Establishing healthy habits to become socially responsible global citizens.<br>
               Target # of students:20 per class
@@ -191,7 +180,7 @@
       <a href="program3.html"  class="program-btn">kinder +5years</a>
           </div>
           <div class="program-card Kindergarten">
-            <img src="baby-3.webp" alt="Early Years Program" class="program-image">
+            <img src="img/baby-3.webp" alt="Early Years Program" class="program-image">
             <h2>GRADE 1/+6YEARS</h2>
             <p class="paragraph"> Engaging students in a  literacy based, thematic  and integrated curriculum of math, language arts, social studies & science, as well as continuing their cognitive and social development.<br>
               Target # of students:25 per class
@@ -203,7 +192,7 @@
           </div>
 
           <div class="program-card special">
-            <img src="program9.jpg" alt="Early Years Program" class="program-image">
+            <img src="img/program9.jpg" alt="Early Years Program" class="program-image">
             <h2>GRADE 2/+7YEARS</h2>
             <p class="paragraph">Building on top of social, language, and literacy skills learned earlier in Grade 1, by expanding upon them, immersing students in a structured curriculum that develops curiosity and retention of information around a variety of subjects.
               Target # of students:25 per class Full Day 8:00 am-3:00pm </p>
@@ -227,7 +216,7 @@ Early Childhood Learning Center</h2>
   
     <!-- Reason 1 -->
     <div class="why-item">
-      <img src="visionimg.jpg" alt="Vibrant Learning Space">
+      <img src="img/visionimg.jpg" alt="Vibrant Learning Space">
       <div class="why-content">
         <h3>Mission</h3>
         <p class="paragraph">
@@ -239,7 +228,7 @@ Early Childhood Learning Center</h2>
   
     <!-- Reason 2 -->
     <div class="why-item reverse">
-      <img src="missionimage.jpg" alt="Early Development">
+      <img src="img/missionimage.jpg" alt="Early Development">
       <div class="why-content">
         <h3>Vision</h3>
         <p class="paragraph">
@@ -251,7 +240,7 @@ Early Childhood Learning Center</h2>
   
     <!-- Reason 3 -->
     <div class="why-item">
-      <img src="corevaluesimg.jpg" alt="Comprehensive Curriculum">
+      <img src="img/corevaluesimg.jpg" alt="Comprehensive Curriculum">
       <div class="why-content">
         <h3>Core Values</h3>
         <p class="paragraph">
@@ -271,7 +260,7 @@ Family Involvement
   
     <!-- Reason 4 -->
     <div class="why-item reverse">
-      <img src="safetymeetsimg.jpg" alt="Safe Environment">
+      <img src="img/safetymeetsimg.jpg" alt="Safe Environment">
       <div class="why-content">
         <h3>Where Safety Meets Discovery</h3>
         <p class="paragraph">
@@ -282,7 +271,7 @@ Family Involvement
   
     <!-- Reason 5 -->
     <div class="why-item">
-      <img src="baby2.jpg" alt="Individual Attention">
+      <img src="img/baby2.jpg" alt="Individual Attention">
       <div class="why-content">
         <h3>Parental Engagement</h3>
         <p class="paragraph">
@@ -293,7 +282,7 @@ Family Involvement
   
     <!-- Reason 6 -->
     <div class="why-item reverse">
-      <img src="suhasa7.jpg" alt="Parental Involvement">
+      <img src="img/suhasa7.jpg" alt="Parental Involvement">
       <div class="why-content">
         <h3> Discover Learn Connect  and Grow</h3>
         <p class="paragraph">
@@ -311,7 +300,7 @@ Family Involvement
       
 
 <!----------------contact us------------------------>
-   <section class="hii">
+<section class="hii">
 <section class="contact-section">
 
     <div>
@@ -326,35 +315,24 @@ Family Involvement
         </div>
     </div>
     
-    <!-- Footer -->
-  <!-- Footer -->
+<!-- Footer -->
 <footer>
     <!-- Curved Background Section -->
     <div class="curved-background"></div>
 
-    
-      
-
         <!--- Footer Links -->
         <ul>
-            <a href="knowmorepage.html">know More About Us</a><br>
+            <a href="knowmorepage.html">About Us</a><br>
             <a href="programs.html">Programs</a><br>
             <a href="founders.html">Founder's Story</a>
         </ul>
 
         <!-- Copyright Text -->
-        <p class="paragraph">&copy;  'Suhasa Early Childhood Learning Centre' & All Rights Reserved!:></p>
-
-        <!-- Policies Links -->
-        <p>
-          
-        </p>
+        <p class="paragraph">&copy;  Suhasa Early Childhood Learning Centre & All Rights Reserved!</p>
     </div>
 </footer>
 
-</section>
-    
-      
+</section>   
     <script src="javascript.js"></script>
 </section>
 </body>
