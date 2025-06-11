@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suhasa School </title>
@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
 
     <link rel="icon" href="logo.jpg" type="image/x-icon">
-  </head>
+
 
 <body>
   <!-- This placeholder will load the navbar -->
@@ -22,10 +22,18 @@
         .then(response => response.text())
         .then(html => {
             document.getElementById('navbar-container').innerHTML = html;
+             
         });
 </script>
 
-    
+
+   <div class="hamburger" onclick="toggleMenu()"></div>
+
+<nav id="mobileMenu" class="hidden">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav> 
     <!--image slider-->
     
     <section>
@@ -35,6 +43,7 @@
                 <img src="slider1.jpg" />
             </div>
          
+            
             <div class="image-item">
                 <img src="image4.jpg" />
             </div>
@@ -89,7 +98,9 @@
             Each age group will focus on developing conversation, recognition/ reading,<br> and writing skills, alongside early math abilities, through engaging hands-on activities and projects tailored to their age and skill level."
         </bold>
           </p><br>
-
+        <p>
+        
+        </p>
         
      <a href="knowmorepage.html"  class="know-more-btn">Know More</a>
     </div>
@@ -211,7 +222,7 @@
 
    <!-----------------------------suhasa early childhood/why us------------------------------>
    <section class="why-us-section">
-    <h2 class="wyus">SUHASA
+    <h2 class="wyus">SUHASA<br>
 Early Childhood Learning Center</h2>
   
     <!-- Reason 1 -->
@@ -300,7 +311,7 @@ Family Involvement
       
 
 <!----------------contact us------------------------>
-<section class="hii">
+   <section class="hii">
 <section class="contact-section">
 
     <div>
@@ -315,26 +326,34 @@ Family Involvement
         </div>
     </div>
     
-<!-- Footer -->
+    <!-- Footer -->
+  <!-- Footer -->
 <footer>
     <!-- Curved Background Section -->
     <div class="curved-background"></div>
 
+    
+      
+
         <!--- Footer Links -->
         <ul>
-            <a href="knowmorepage.html">About Us</a><br>
+            <a href="knowmorepage.html">know More About Us</a><br>
             <a href="programs.html">Programs</a><br>
             <a href="founders.html">Founder's Story</a>
         </ul>
 
         <!-- Copyright Text -->
-        <p class="paragraph">&copy;  Suhasa Early Childhood Learning Centre & All Rights Reserved!</p>
+        <p class="paragraph">&copy;  'Suhasa Early Childhood Learning Centre' & All Rights Reserved!:></p>
+
+        <!-- Policies Links -->
+        <p>
+          
+        </p>
     </div>
 </footer>
 
-</section>   
+</section>
+    
+      
     <script src="javascript.js"></script>
 </section>
-</body>
-
-</html>
