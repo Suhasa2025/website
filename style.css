@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 :root {
-    color-scheme: light;
+    color-scheme: dark;
 }
 /* General Reset */
 * {
@@ -860,45 +860,23 @@ footer .paragraph {
     }
 }
 
+/* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #121212;
-        color: #f5f5f5;
+        background-color: #ffffff;
+        color: #161616;
     }
-
-    .navbar,
+    
+    .navbar {
+        background: #ffffff;
+    }
+    
     .nav-links {
-        background: #1f1f1f;
+        background: #ffffff;
     }
-
+    
     .program-card {
-        background-color: #2c2c2c;
-        color: #ffffff;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
-    }
-
-    .know-more-btn {
-        background-color: #4CAF50;
-        color: white;
-    }
-
-    .program-btn {
-        background-color: #4285f4;
-        border-color: #7aa9f9;
-        color: white;
-    }
-
-    footer .paragraph {
-        background-color: #1c1c1c;
-        color: #f5f5f5;
-    }
-
-    footer ul a {
-        color: #66aaff;
-    }
-
-    footer ul a:hover {
-        color: #ffffff;
+        box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
     }
 }
 
