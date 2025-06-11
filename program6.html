@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Infant Program</title>
+
+  <!-- ✅ Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ✅ Base Styles */
+    body {
+      background-color: #faf6ed;
+      margin: 0;
+      padding: 0;
+      font-family: 'Lato', Arial, sans-serif;
+    }
+
+    .content-container {
+      position: relative;
+      width: 90%;
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 50px 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .top-image,
+    .bottom-inside {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .side-image {
+      display: none;
+    }
+
+    .text-content h1 {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 20px;
+      background-color: aqua;
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 10px;
+    }
+
+    .text-content h2 {
+      font-size: 22px;
+      color: #444;
+      margin-top: 20px;
+    }
+
+    .text-content p {
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+
+    .footer {
+      background-color: #FFD700;
+      text-align: center;
+      padding: 15px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+
+    .footer span:nth-child(1) {
+      color: #B22222;
+    }
+
+    .footer span:nth-child(3) {
+      color: #1E90FF;
+    }
+
+    /* ✅ Responsive Enhancements */
+    @media (max-width: 480px) {
+      .text-content h1 {
+        font-size: 24px;
+      }
+
+      .text-content h2 {
+        font-size: 18px;
+      }
+
+      .text-content p {
+        font-size: 16px;
+      }
+
+      .footer {
+        font-size: 18px;
+        padding: 12px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .side-image {
+        display: block;
+        position: absolute;
+        width: 80px;
+        top: 120px;
+      }
+
+      .right-inside {
+        right: 20px;
+        width: 115px;
+        padding-top: 180px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ✅ Navbar -->
+  <div id="navbar-container"></div>
+
+  <div class="content-container">
+    <img src="img/kidspainting.jpg" alt="Children right" class="side-image right-inside" />
+
+    <div class="text-content">
+      <h1>Infant Program</h1>
+      <p>Our Infant Program is designed to create a nurturing, safe, and stimulating environment for babies aged 6 weeks to 1 year. Our focus is on:</p>
+
+      <h2>Nurturing Care</h2>
+      <p>Experienced caregivers who provide warmth, attention, and personalized care to meet each infant’s needs.</p>
+
+      <h2>Sensory Exploration</h2>
+      <p>Activities designed to engage babies' senses through touch, sight, sound, and movement, helping them discover the world around them.</p>
+
+      <h2>Foundational Development</h2>
+      <p>Supporting early milestones such as rolling, sitting, crawling, and beginning communication through songs, stories, and play.</p>
+
+      <h2>Individual Attention</h2>
+      <p>Low caregiver-to-infant ratios to ensure each child gets dedicated interaction and care.</p>
+
+      <h2>Daily Routines</h2>
+      <p>Structured routines for feeding, napping, and playtime to help infants feel secure and develop good habits.</p>
+
+      <img src="img/kidshi.jpg" alt="children bottom" class="bottom-inside" />
+    </div>
+
+    <div class="footer">
+      <span>Learn</span> · <span>Play</span> · <span>Create</span>
+    </div>
+  </div>
+
+  <!-- ✅ Script to Load Navbar -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch('navbar.html')
+        .then(response => {
+          if (!response.ok) throw new Error('Failed to fetch navbar');
+          return response.text();
+        })
+        .then(html => {
+          document.getElementById('navbar-container').innerHTML = html;
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+    });
+  </script>
+</body>
+</html>

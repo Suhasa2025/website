@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade I and II</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fffbe6;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .poster {
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-sizing: border-box;
+    }
+    
+    .header {
+        text-align: center;
+        background-color: #8BC34A;
+        padding: 20px;
+        border-radius: 8px;
+        color: white;
+        margin-bottom: 30px;
+    }
+    
+    .header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+    }
+    
+    .section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+        gap: 20px;
+    }
+    
+    .section.reverse {
+        flex-direction: row-reverse;
+    }
+    
+    .text {
+        flex: 1;
+        padding: 20px;
+        margin-top: 0px;
+    }
+    
+    .text h2 {
+        color: #4CAF50;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .text ul {
+        list-style: disc;
+        padding-left: 20px;
+        line-height: 1.6;
+    }
+    
+    .image {
+        flex: 0 0 200px;
+        text-align: center;
+    }
+    
+    .image img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .footer {
+        background-color: #FFD700;
+        text-align: center;
+        padding: 15px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        border-radius: 8px;
+    }
+    
+    .footer span:nth-child(1) {
+        color: #B22222;
+    }
+    
+    .footer span:nth-child(3) {
+        color: #1E90FF;
+    }
+
+    /* Tablet Styles */
+    @media (max-width: 768px) {
+        .poster {
+            padding: 15px;
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+        }
+        
+        .section {
+            flex-direction: column !important;
+            text-align: center;
+            gap: 20px;
+        }
+        
+        .section.reverse {
+            flex-direction: column !important;
+        }
+        
+        .text {
+            width: 100%;
+            padding: 15px;
+        }
+        
+        .text h2 {
+            font-size: 1.5rem;
+        }
+        
+        .image {
+            flex: none;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .image img {
+            max-width: 250px;
+        }
+        
+        .footer {
+            font-size: 20px;
+            padding: 12px;
+        }
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 480px) {
+        .poster {
+            padding: 10px;
+        }
+        
+        .header {
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 1.6rem;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            gap: 15px;
+        }
+        
+        .text {
+            padding: 10px;
+        }
+        
+        .text h2 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .text ul {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .image img {
+            max-width: 200px;
+        }
+        
+        .footer {
+            font-size: 18px;
+            padding: 10px;
+        }
+    }
+
+    /* Extra small mobile */
+    @media (max-width: 320px) {
+        .header h1 {
+            font-size: 1.4rem;
+        }
+        
+        .text h2 {
+            font-size: 1.2rem;
+        }
+        
+        .text ul {
+            font-size: 0.85rem;
+        }
+        
+        .image img {
+            max-width: 150px;
+        }
+        
+        .footer {
+            font-size: 16px;
+        }
+    }
+</style>
+
+<body>
+    <!-- Navbar will be loaded here -->
+    <div id="navbar-container"></div>
+    
+    <script>
+        // Load the navbar using fetch
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('navbar.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch navbar');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById('navbar-container').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        });
+    </script>
+
+    <div class="poster">
+        <div class="header">
+            <h1>Grade I and II</h1>
+        </div>
+        
+        <div class="section reverse">
+            <div class="image">
+                <img src="img/kida.jpg" alt="Kids reading">
+            </div>
+            <div class="text">
+                <h2>Literacy</h2>
+                <ul>
+                    <li>Phonemic awareness</li>
+                    <li>Phonics</li>
+                    <li>Vocabulary Development</li>
+                    <li>Reading fluency</li>
+                    <li>Comprehension</li>
+                    <li>Developing writing skills</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="image">
+                <img src="img/kidswritingboard.jpg" alt="Kids writing">
+            </div>
+            <div class="text">
+                <h2>Numeracy</h2>
+                <ul>
+                    <li>Number Recognition and counting</li>
+                    <li>Basic math operations</li>
+                    <li>Problem solving</li>
+                    <li>Measurement and Basic geometry</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section reverse">
+            <div class="image">
+                <img src="img/kidstable.jpg" alt="Kids reading together">
+            </div>
+            <div class="text">
+                <h2>Social and Emotional development</h2>
+                <ul>
+                    <li>Self-Awareness</li>
+                    <li>Empathy</li>
+                    <li>Fine Motor skills</li>
+                    <li>Gross Motor skills</li>
+                    <li>Coordination</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <span>Learn</span> · <span>Play</span> · <span>Create</span>
+        </div>
+    </div>
+</body>
+</html>
