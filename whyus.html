@@ -5,20 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>why us</title>
      <style>
-
+    /* Reset default browser margins and padding */
     * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: white;
-            color: #333;
-        }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
 
-        /* Navbar Styles */
+    html {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header-image {
+      display: block;
+      margin: 0 auto;
+      max-width: 200px; /* Adjust width as needed */
+      margin-top: 1cm;
+    }
+
+    .center-title {
+      text-align: center;
+      color: #cc6600; /* Optional: for orange title */
+    }
+
+    /* Why Us Section */
+.wyus {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 20px 0;
+    padding: 0 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.why-us-section {
+    padding: 10px 15px;
+    background-color: rgb(243, 243, 164);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.why-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.why-item img {
+    max-width: 100%;
+    width: 350px;
+    height: 300px;
+    border-radius: 20px;
+    border: 5px solid #b7bd05;
+    margin-bottom: 20px;
+}
+
+.why-content {
+    padding: 0 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.why-content h3 {
+    font-size: 1.7rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+    
+    /* Mobile Styles */
+    @media screen and (max-width: 768px) {
+
+    .whyus1{
+     margin-top: 1.5cm;
+        }
+    }
+
+    /* Navbar Styles */
         .announcement-bar {
             background-color: rgb(221, 244, 220);
             color: rgb(0, 0, 0);
@@ -26,6 +100,8 @@
             text-align: center;
             font-weight: bold;
             font-size: 16px;
+            width: 100%;
+            margin: 0;
         }
 
         .announcement-bar a {
@@ -37,8 +113,6 @@
             font-size: 20px;
         }
 
-
-
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -48,6 +122,8 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: relative;
             z-index: 1000;
+            width: 100%;
+            margin: 0;
         }
 
         .logo img {
@@ -203,33 +279,29 @@
                 padding: 10px 15px;
             }
         }
-        
-        
-    .header-image {
-      display: block;
-      margin: 0 auto;
-      max-width: 200px; /* Adjust width as needed */
-      margin-top: 1cm;
-    }
 
-    .center-title {
-      text-align: center;
-      color: #cc6600; /* Optional: for orange title */
-    } 
-
-    /* Mobile Styles */
-        @media screen and (max-width: 768px) {
-
-      .whyus1{
-        margin-top: 1.5cm;
-        }
-
-        }
   </style>
 
-
+    <script>
+        // Load the navbar using fetch
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('navbar.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch navbar');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById('navbar-container').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        });
+    </script>
+ 
 </head>
 <body>
+
   <!-- Top Announcement Bar -->
     <div class="announcement-bar">
         <marquee behavior="scroll" direction="right" scrollamount="10">
@@ -248,11 +320,21 @@
         </button>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="ourstory.html">About Us</a></li>
+            
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">
+                    About
+                    <span class="dropdown-arrow">&#x25BE;</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="ourstory.html">OurStory</a></li>
+                    <li><a href="knowmore.html">KnowMore</a></li>
+                </ul>
+            </li>
+            
             <li><a href="programs.html">All Programs</a></li>
             <li><a href="workshop.html">Workshops</a></li>
             <li><a href="whyus.html">Suhasa</a></li>
-
             
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle">
@@ -271,12 +353,10 @@
         </ul>
     </nav>
 
-
-
      <section class="why-us-section">
     
     <section class="whyus1">
-      <h2>SUHASA<br>Early Childhood Learning Center</h2>
+      <h2 style="text-align: center;">SUHASA<br>Early Childhood Learning Center</h2>
     </section>
   <!-- Reason 1 -->
     <div class="why-item">
@@ -285,8 +365,6 @@
         <h3>Mission</h3>
         <p>
 Intentionally building a collaborative learning community while celebrating the strengths of all learners and supporting the growth of early learning skills through developmentally appropriate practices to build a foundation for learning.
-
-
         </p>
       </div>
     </div>
@@ -306,7 +384,7 @@ Intentionally building a collaborative learning community while celebrating the 
     <div class="why-item">
       <img src="img/corevaluesimg.jpg" alt="Comprehensive Curriculum">
       <div class="why-content">
-        <h3> Literary -Based Integrated Curriculum</h3>
+        <h3> Literary -Based Integrated Curriculum</h3>
         <p>
  A literacy-based integrated curriculum for an early childhood center weaves reading, writing, speaking, and listening skills throughout all subject areas and daily activities, using children's literature and language experiences as the foundation for learning in science, math, social studies, and the arts. 
         </p>
@@ -330,7 +408,7 @@ Intentionally building a collaborative learning community while celebrating the 
       <div class="why-content">
         <h3>Parental Engagement</h3>
         <p>
-            Suhasa believes in creating meaningful partnerships between families and educators to support children's development and learning both at school and at home.
+            Suhasa believes in creating meaningful partnerships between families and educators to support children's development and learning both at school and at home.
         </p>
       </div>
     </div>
@@ -346,11 +424,9 @@ Intentionally building a collaborative learning community while celebrating the 
       </div>
     </div>
   
-  </section> *>
+  </section> 
 
-
-
-      <script>
+  <script>
         document.addEventListener('DOMContentLoaded', () => {
             const menuToggle = document.querySelector('.menu-toggle');
             const navLinks = document.querySelector('.nav-links');
@@ -403,5 +479,6 @@ Intentionally building a collaborative learning community while celebrating the 
             });
         });
     </script>
+
 </body>
 </html>
