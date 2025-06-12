@@ -662,12 +662,12 @@ footer .paragraph {
     }
     
     .navbar {
-        height: 100px;
+        height: 125px;
         padding: 12px 5%;
     }
     
     .logo img {
-        max-height: 80px;
+        max-height: 115px;
     }
     
     .nav-links {
