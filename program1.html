@@ -1,303 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toddler Program</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            padding-top: 100px;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #fff8e1 0%, #ffffff 50%, #f3e5f5 100%);
-            color: #333;
-            line-height: 1.6;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-        
-        /* Navbar container */
-        #navbar-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Main Content Container - Mobile First */
-        .container {
-            width: 95%;
-            max-width: 800px;
-            margin: 120px auto 40px;
-            margin-top: 10px;
-            padding: 20px;
-            border: 4px solid #fdd835;
-            border-radius: 20px;
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            backdrop-filter: blur(10px);
-        }
-        
-        h1 {
-            font-size: 24px;
-            line-height: 1.3;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-        
-        .highlight {
-            background: linear-gradient(45deg, #FFD700, #FFA500);;
-            padding: 8px 12px;
-            border-radius: 8px;
-            display: inline-block;
-            box-shadow: 0 2px 8px rgba(253, 216, 53, 0.3);
-        }
-        
-        .content-section {
-            margin: 30px 0;
-        }
-        
-        .program-list {
-            text-align: left;
-            margin: 20px 0;
-            padding: 0 10px;
-        }
-        
-        .program-list ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .program-list li {
-            background: linear-gradient(90deg, #e3f2fd, #f8f9fa);
-            margin: 8px 0;
-            padding: 12px 15px;
-            border-radius: 10px;
-            border-left: 4px solid #2196f3;
-            font-size: 16px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        
-        .program-list li:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .program-list li::before {
-            content: "🌟";
-            margin-right: 8px;
-            font-size: 14px;
-        }
-        
-        .header-image {
-            width: 100%;
-            max-width: 350px;
-            height: auto;
-            margin: 20px auto;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-        
-        .header-image:hover {
-            transform: scale(1.05);
-        }
-        
-        .brush-text {
-            font-size: 22px;
-            font-weight: bold;
-            color: #fff;
-            background: linear-gradient(45deg, #ff6b6b, #ffa726, #66bb6a);
-            padding: 15px 25px;
-            border-radius: 25px;
-            display: inline-block;
-            text-align: center;
-            margin: 20px auto;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-            animation: gentle-bounce 3s ease-in-out infinite;
-        }
-        
-        @keyframes gentle-bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
-        }
-        
-        
-        /* Age badge */
-        .age-badge {
-            background: linear-gradient(45deg, #e91e63, #f06292);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 8px rgba(233, 30, 99, 0.3);
-        }
-        
-        /* Responsive Design */
-        @media (min-width: 480px) {
-            .container {
-                padding: 30px;
-            }
-            
-            h1 {
-                font-size: 28px;
-            }
-            
-            .program-list li {
-                font-size: 17px;
-                padding: 15px 20px;
-            }
-            
-            .brush-text {
-                font-size: 26px;
-                padding: 18px 30px;
-            }
-            
-            .header-image {
-                max-width: 250px;
-            }
-        }
-        
-        @media (min-width: 768px) {
-            body {
-               padding-top: 100px; 
-            }
-            
-            .container {
-                margin: 140px auto 60px;
-                padding: 40px;
-            }
-            
-            h1 {
-                font-size: 32px;
-            }
-            
-            .program-list {
-                padding: 0 20px;
-            }
-            
-            .program-list li {
-                font-size: 18px;
-                padding: 16px 25px;
-            }
-            
-            .brush-text {
-                font-size: 30px;
-                padding: 20px 40px;
-            }
-            
-            .header-image {
-                max-width: 250px;
-            }
-            
-            .footer {
-                font-size: 20px;
-                padding: 25px;
-            }
-        }
-        
-        @media (min-width: 1024px) {
-            .container {
-                margin: 160px auto 80px;
-            }
-            
-            h1 {
-                font-size: 36px;
-            }
-            
-            .brush-text {
-                font-size: 34px;
-            }
-        }
-        
-        /* Touch-friendly improvements for mobile */
-        @media (hover: none) and (pointer: coarse) {
-            .program-list li:hover {
-                transform: none;
-            }
-            
-            .header-image:hover {
-                transform: none;
-            }
-        }
-        
-        /* Loading animation */
-        .container {
-            animation: fade-in 0.8s ease-out;
-        }
-        
-        @keyframes fade-in {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
-    <script>
-        // Load navbar dynamically
-        document.addEventListener("DOMContentLoaded", () => {
-            fetch('navbar.html')
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById('navbar-container').innerHTML = html;
-                })
-                .catch(error => console.error('Error loading navbar:', error));
-        });
-    </script>
-</head>
-<body>
-    <!-- Navbar Container -->
-    <div id="navbar-container"></div>
-    
-    <!-- Main Content -->
-    <div class="container">
-        <div class="age-badge">Ages 18 months - 3 years</div>
-        <h1><span class="highlight">Toddler Program/Pre-K1</span></h1>
-        
-        <div class="content-section">
-            <div class="program-list">
-                <ul>
-                    <li>Developing safe and healthy habits</li>
-                    <li>Fostering positive self-esteem</li>
-                    <li>Providing opportunities for creative expression</li>
-                    <li>Supporting the development of social skills</li>
-                    <li>Stimulating cognitive problem-solving</li>
-                    <li>Strengthening listening, reading, writing, and speaking skills</li>
-                    <li>Enhancing fine motor and gross motor skills</li>
-                    <li>Assessing individual learning needs</li>
-                </ul>
-            </div>
-            
-            <img src="img/boygirl.jpg" alt="Kids holding hands in a circle" class="header-image"></br>
-            
-            <div class="brush-text">
-                Learn • Play • Create
-            </div>
-        </div>
-    </div>
-    
-    <div class="footer">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Toddler Program</title>
 
+  <!-- ✅ Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ✅ Base Styles */
+    body {
+      background-color: #faf6ed;
+      margin: 0;
+      padding: 0;
+      font-family: 'Lato', Arial, sans-serif;
+    }
+
+    .content-container {
+      position: relative;
+      width: 90%;
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 50px 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .top-image,
+    .bottom-inside {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .side-image {
+      display: none;
+    }
+
+    .age-badge {
+      background: linear-gradient(45deg, #e91e63, #f06292);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 8px rgba(233, 30, 99, 0.3);
+    }
+
+    .text-content h1 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 20px;
+      background: linear-gradient(45deg, #FFD700, #FFA500);
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 10px;
+      text-transform: uppercase;
+    }
+
+    .text-content h2 {
+      font-size: 22px;
+      color: #444;
+      margin-top: 20px;
+    }
+
+    .text-content p {
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+
+    .program-list {
+      text-align: left;
+      margin: 20px 0;
+      padding: 0 10px;
+    }
+
+    .program-list ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .program-list li {
+      background: linear-gradient(90deg, #e3f2fd, #f8f9fa);
+      margin: 8px 0;
+      padding: 12px 15px;
+      border-radius: 10px;
+      border-left: 4px solid #2196f3;
+      font-size: 18px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .program-list li:hover {
+      transform: translateX(5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .program-list li::before {
+      content: "🌟";
+      margin-right: 8px;
+      font-size: 14px;
+    }
+
+    .footer {
+      background-color: #FFD700;
+      text-align: center;
+      padding: 15px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+
+    .footer span:nth-child(1) {
+      color: #B22222;
+    }
+
+    .footer span:nth-child(3) {
+      color: #1E90FF;
+    }
+
+    /* ✅ Responsive Enhancements */
+    @media (max-width: 480px) {
+      .text-content h1 {
+        font-size: 24px;
+      }
+
+      .text-content h2 {
+        font-size: 18px;
+      }
+
+      .text-content p {
+        font-size: 16px;
+      }
+
+      .program-list li {
+        font-size: 16px;
+        padding: 10px 12px;
+      }
+
+      .footer {
+        font-size: 18px;
+        padding: 12px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .side-image {
+        display: block;
+        position: absolute;
+        width: 80px;
+        top: 120px;
+      }
+
+      .right-inside {
+        right: 20px;
+        width: 115px;
+        padding-top: 180px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ✅ Navbar -->
+  <div id="navbar-container"></div>
+
+  <div class="content-container">
+    <img src="img/boygirl.jpg" alt="Children playing" class="side-image right-inside" />
+
+    <div class="text-content">
+      <div class="age-badge">Ages 18 months - 3 years</div>
+      <h1>Pre Kinder Garden I & II</h1>
+      <p>Our Pre kinder garden program is designed to provide a safe, nurturing, and stimulating environment for children aged 18 months to 3 years. Our comprehensive approach focuses on:</p>
+
+      <div class="program-list">
+        <ul>
+          <li>Developing safe and healthy habits</li>
+          <li>Fostering positive self-esteem</li>
+          <li>Providing opportunities for creative expression</li>
+          <li>Supporting the development of social skills</li>
+          <li>Stimulating cognitive problem-solving</li>
+          <li>Strengthening listening, reading, writing, and speaking skills</li>
+          <li>Enhancing fine motor and gross motor skills</li>
+          <li>Assessing individual learning needs</li>
+        </ul>
+      </div>
+
+      <img src="img/boygirl.jpg" alt="kids holding hands in circle" class="bottom-inside" />
     </div>
+
+    <div class="footer">
+      <span>Learn</span> · <span>Play</span> · <span>Create</span>
+    </div>
+  </div>
+
+  <!-- ✅ Script to Load Navbar -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch('navbar.html')
+        .then(response => {
+          if (!response.ok) throw new Error('Failed to fetch navbar');
+          return response.text();
+        })
+        .then(html => {
+          document.getElementById('navbar-container').innerHTML = html;
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+    });
+  </script>
 </body>
 </html>
