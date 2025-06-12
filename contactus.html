@@ -3,34 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <!-- Load Navbar -->
-<div id="navbar-container"></div>
-
-<script>
-    fetch('navbar.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('navbar-container').innerHTML = html;
-        })
-        .catch(error => console.error('Error loading navbar:', error));
-</script>
-</head>
-
+    <title>Contact Us - Suhasa School</title>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
     <style>
-        body
-        
-        {
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: Arial, sans-serif;
-            background:rgb(160, 205, 209);
+            background: white;
             color: #333;
         }
+
+        /* Navbar Styles */
+        .announcement-bar {
+            background-color: rgb(221, 244, 220);
+            color: rgb(0, 0, 0);
+            padding: 12px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .announcement-bar a {
+            color: #118a03;
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Kalam', 'Papyrus', cursive;
+            text-decoration: underline;
+            font-size: 20px;
+        }
+
+
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 90px;
+            width: auto;
+        }
+
+        .menu-toggle {
+            display: block;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            z-index: 999;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links > li > a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            font-size: 16px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .nav-links > li > a:hover {
+            color: white;
+            background-color: #f09556;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .dropdown-arrow {
+            transition: transform 0.3s ease;
+            font-size: 12px;
+        }
+
+        .dropdown.active .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            display: none;
+            flex-direction: column;
+            background-color: #f8f9fa;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            border-top: 1px solid #eee;
+        }
+
+        .dropdown.active .dropdown-menu {
+            display: flex;
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown-menu a {
+            text-decoration: none;
+            color: #666;
+            font-weight: normal;
+            padding: 12px 40px;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: block;
+            width: 100%;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #e9ecef;
+            color: #333;
+        }
+
+        /* Desktop Styles */
+        @media (min-width: 768px) {
+            .menu-toggle {
+                display: none;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: row;
+                position: static;
+                width: auto;
+                background: none;
+                box-shadow: none;
+            }
+
+            .nav-links > li > a {
+                padding: 10px 15px;
+                border-bottom: none;
+                font-size: 14px;
+            }
+
+            .dropdown:hover .dropdown-menu {
+                display: flex;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                min-width: 200px;
+                background: white;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            }
+
+            .dropdown-menu {
+                flex-direction: column;
+            }
+
+            .dropdown-menu a {
+                padding: 10px 15px;
+            }
+        }
+
+        /* Contact Page Styles */
         .contact-container {
             padding: 50px 5%;
-            background: linear-gradient(to bottom,#ffffff 100%);
+            background: linear-gradient(to bottom, #ffffff 100%);
         }
+
         .contact-box {
             display: flex;
             justify-content: space-between;
@@ -40,13 +225,16 @@
             border-radius: 20px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
+
         .form-section, .info-section {
             flex: 1;
         }
+
         .form-section h2, .info-section h2 {
             color: rgb(67, 65, 222);
             font-size: 24px;
         }
+
         .form-section input, .form-section textarea {
             width: 90%;
             padding: 10px;
@@ -54,6 +242,7 @@
             border: 1px solid #ccc;
             border-radius: 10px;
         }
+
         .form-section button {
             background: #E87E3B;
             color: white;
@@ -62,21 +251,26 @@
             border-radius: 10px;
             cursor: pointer;
         }
+
         .form-section button:hover {
             background: #D36A2A;
         }
+
         .info-section a {
             color: #E87E3B;
             text-decoration: none;
         }
+
         .info-section a:hover {
             text-decoration: underline;
         }
+
         .map-container iframe {
             width: 100%;
             height: 300px;
             border-radius: 10px;
         }
+
         @media (max-width: 768px) {
             .contact-box {
                 flex-direction: column;
@@ -85,43 +279,127 @@
     </style>
 </head>
 <body>
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <marquee behavior="scroll" direction="right" scrollamount="10">
+            ADMISSIONS OPEN NOW for 2025-2026
+            <a href="programs.html">Programs Available</a>
+        </marquee>
+    </div>
 
-<div class="contact-container">
-    <h1 style="text-align: center; color: rgb(220, 146, 7);">Contact Us</h1>
-
-    <div class="contact-box">
-        <div class="form-section">
-            <h2>Enquire Now</h2>
-            <form>
-                <input type="text" placeholder="Parent Name" required>
-                <input type="email" placeholder="Email" required>
-                <input type="text" placeholder="Mobile Number" required>
-                <input type="text" placeholder="Child's Age" required>
-                <input type="text" placeholder="Your Resident Pincode" required>
-                <textarea placeholder="Message" rows="4" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/logo.jpg" alt="Suhasa School">
         </div>
+        <button class="menu-toggle" aria-label="Toggle Navigation">
+            &#9776;
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ourstory.html">About Us</a></li>
+            <li><a href="programs.html">All Programs</a></li>
+            <li><a href="workshop.html">Workshops</a></li>
+            <li><a href="whyus.html">Suhasa</a></li>
+            
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">
+                    Social
+                    <span class="dropdown-arrow">&#x25BE;</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://www.facebook.com/share/17yaEL7fqz/?mibextid=wwXIfr">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/suhasaearly.learning">Instagram</a></li>
+                    <li><a href="#">Whatsapp</a></li>
+                    <li><a href="https://maps.app.goo.gl/PTneu3hpB7hNju5o7">Google Maps</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+    </nav>
 
-        <div class="info-section">
-            <h2>Reach Us</h2>
-            <p>Near Telecom Nagar Extension Gachibowli,Hyd,TS,India.</p>
-            <p><strong>LandMark:</strong> plot no:cyber meadows society</p>
-            <p><strong>Contact:</strong> <a href="">suhasaearlylearning@gmail.com</a></p>
-            <p><strong>Phone:</strong> +91 8985942970</p>
+    <!-- Contact Content -->
+    <div class="contact-container">
+        <h1 style="text-align: center; color: rgb(220, 146, 7);">Contact Us</h1>
 
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5792116676157!2d78.3657759!3d17.4319701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb938f27162edb%3A0x2ce8744848747b45!2ssuhasa%20earlylearning%20center!5e0!3m2!1sen!2sin!4v1742791749449!5m2!1sen!2sin" width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> 
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="contact-box">
+            <div class="form-section">
+                <h2>Enquire Now</h2>
+                <form>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <div class="info-section">
+                <h2>Reach Us</h2>
+                <p>Near Telecom Nagar Extension Gachibowli,Hyd,TS,India.</p>
+                <p><strong>LandMark:</strong> plot no:cyber meadows society</p>
+                <p><strong>Contact:</strong> <a href="mailto:suhasaearlylearning@gmail.com">suhasaearlylearning@gmail.com</a></p>
+                <p><strong>Phone:</strong> +91 8985942970</p>
+
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5792116676157!2d78.3657759!3d17.4319701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb938f27162edb%3A0x2ce8744848747b45!2ssuhasa%20earlylearning%20center!5e0!3m2!1sen!2sin!4v1742791749449!5m2!1sen!2sin" 
+                            width="600" height="300" style="border:0;" 
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            // Mobile menu toggle
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    console.log('Menu toggled, active class:', navLinks.classList.contains('active'));
+                });
+            }
+
+            // Dropdown functionality
+            dropdowns.forEach(dropdown => {
+                const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+                
+                if (dropdownToggle) {
+                    dropdownToggle.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        
+                        // Close other dropdowns
+                        dropdowns.forEach(otherDropdown => {
+                            if (otherDropdown !== dropdown) {
+                                otherDropdown.classList.remove('active');
+                            }
+                        });
+                        
+                        // Toggle current dropdown
+                        dropdown.classList.toggle('active');
+                    });
+                }
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.dropdown')) {
+                    dropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            });
+
+            // Close mobile menu when clicking on a regular link
+            const regularLinks = document.querySelectorAll('.nav-links > li > a:not(.dropdown-toggle)');
+            regularLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+        });
+    </script>
 </body>
-<!-- Load Navbar -->
-<div id="navbar-container"></div>
-
-
-
 </html>
