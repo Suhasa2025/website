@@ -4,138 +4,275 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kindergarten Program</title>
-    </head>
     <style>
-body {
-    background-color: #faf6ed;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
+        body {
+            background-color: #faf6ed;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
-.content-container {
-    position: relative;
-    width: 800px;
-    margin: 50px auto;
-    padding: 50px 40px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    text-align: center;
-}
+        .content-container {
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 40px 30px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            border-radius: 10px;
+        }
 
-.top-image {
-    width: 100%;
-    margin-bottom: 40px;
-}
+        .side-image {
+            position: absolute;
+            width: 80px;
+            opacity: 0.8;
+        }
 
-.side-image {
-    position: absolute;
-    width: 80px;
-    top: 120px;
-}
+        .left-inside {
+            left: 20px;
+            top: 120px;
+            width: 120px;
+        }
 
-.left-inside {
-    left: 20px;  /* Keep image inside white box */
-    width: 150px;
-    padding-top: 200px;
+        .right-inside {
+            right: 20px;
+            top: 200px;
+            width: 100px;
+        }
 
-   
-}
+        .text-content h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 25px;
+            background-color: aqua;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
 
-.right-inside {
-    right: 20px; /* Keep image inside white box */
-    width: 100px;
-    padding-top: 100px;
-}
-.footer {
-    background-color: #FFD700;
-    text-align: center;
-    padding: 15px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    border-radius: 8px;
-}
+        .text-content h2 {
+            font-size: 20px;
+            color: #444;
+            margin-top: 25px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
 
-.footer span:nth-child(1) {
-    color: #B22222;
-}
-.footer span:nth-child(3) {
-    color: #1E90FF;
-}
+        .text-content p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
 
-.text-content h1 {
-    font-size: 32px;
-    color: #333;
-    margin-bottom: 20px;
-    background-color: aqua;
-    display: inline-block;
-    border-radius: 10px;
-}
+        .bottom-inside {
+            width: 250px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
 
-.text-content h2 {
-    font-size: 22px;
-    color: #444;
-    margin-top: 20px;
-}
+        .footer {
+            background-color: #FFD700;
+            text-align: center;
+            padding: 15px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
 
-.text-content p {
-    color: #555;
-    line-height: 1.7;
-    margin-bottom: 12px;
-    
-}
-.bottom-inside{
-    width: 150px;
-    margin-top: 5px;
-    
-}
-</style>
-  <!-- Navbar will be loaded here -->
-  <div id="navbar-container"></div>
+        .footer span:nth-child(1) {
+            color: #B22222;
+        }
 
-  <script>
-      // Load the navbar using fetch
-      document.addEventListener("DOMContentLoaded", () => {
-          fetch('navbar.html')
-              .then(response => {
-                  if (!response.ok) {
-                      throw new Error('Failed to fetch navbar');
-                  }
-                  return response.text();
-              })
-              .then(html => {
-                  document.getElementById('navbar-container').innerHTML = html;
-              })
-              .catch(error => console.error('Error loading navbar:', error));
-      });
-  </script>
+        .footer span:nth-child(3) {
+            color: #1E90FF;
+        }
+
+        /* Mobile Styles */
+        @media screen and (max-width: 768px) {
+            body {
+                background-color: #faf6ed;
+            }
+
+            .content-container {
+                width: 95%;
+                margin: 10px auto;
+                padding: 25px 20px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            }
+
+            /* Hide side images on mobile for cleaner look */
+            .side-image {
+                display: none;
+            }
+
+            .text-content h1 {
+                font-size: 24px;
+                padding: 8px 15px;
+                margin-bottom: 20px;
+            }
+
+            .text-content h2 {
+                font-size: 18px;
+                margin-top: 20px;
+                margin-bottom: 6px;
+                color: #2c5aa0;
+            }
+
+            .text-content p {
+                font-size: 15px;
+                line-height: 1.5;
+                margin-bottom: 12px;
+                text-align: left;
+                padding: 0 10px;
+            }
+
+            .bottom-inside {
+                width: 180px;
+                margin: 15px auto;
+            }
+
+            .footer {
+                font-size: 18px;
+                padding: 12px;
+                margin-top: 15px;
+            }
+        }
+
+        /* Small Mobile Styles */
+        @media screen and (max-width: 480px) {
+            .content-container {
+                width: 98%;
+                padding: 20px 15px;
+                margin: 5px auto;
+            }
+
+            .text-content h1 {
+                font-size: 22px;
+                padding: 6px 12px;
+            }
+
+            .text-content h2 {
+                font-size: 17px;
+                margin-top: 18px;
+            }
+
+            .text-content p {
+                font-size: 14px;
+                padding: 0 5px;
+            }
+
+            .bottom-inside {
+                width: 150px;
+            }
+
+            .footer {
+                font-size: 16px;
+                padding: 10px;
+            }
+        }
+
+        /* Large Desktop Styles */
+        @media screen and (min-width: 1200px) {
+            .content-container {
+                max-width: 900px;
+                padding: 60px 50px;
+            }
+
+            .text-content h1 {
+                font-size: 32px;
+                padding: 12px 25px;
+            }
+
+            .text-content h2 {
+                font-size: 22px;
+            }
+
+            .text-content p {
+                font-size: 17px;
+            }
+
+            .left-inside {
+                width: 150px;
+                left: 30px;
+            }
+
+            .right-inside {
+                width: 120px;
+                right: 30px;
+            }
+
+            .footer {
+                font-size: 24px;
+                padding: 18px;
+            }
+        }
+
+        /* Navbar container styling */
+        #navbar-container {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+    </style>
+</head>
 <body>
-    <div class="content-container">
-           <img src="img/kidsfly.jpg" alt="Children Left" class="side-image left-inside">
-        <img src="img/kidsfly copy.jpg" alt="Children Right" class="side-image right-inside">
-       
-        
+    <!-- Navbar will be loaded here -->
+    <div id="navbar-container"></div>
+    
+    <script>
+        // Load the navbar using fetch
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('navbar.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch navbar');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById('navbar-container').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        });
+    </script>
+
+    <div class="content-container">        
         <div class="text-content">
             <h1>Kindergarten I & II</h1>
+            
             <h2>Literacy</h2>
             <p>Phonemic Awareness, Print Awareness, Developing basic reading skills, Pre-writing skills</p>
+            
             <h2>Numeracy</h2>
             <p>Number Sense, Shape and Space, Measurement</p>
+            
             <h2>Social-Emotional Development</h2>
             <p>Self-Regulation, Social Skills, Resolving conflicts</p>
+            
             <h2>Independence</h2>
             <p>Developing a sense of independence and self-confidence</p>
+            
             <h2>Science</h2>
             <p>Learning about the natural world through observation, experimentation, and simple concepts</p>
+            
             <h2>Social Studies</h2>
             <p>Learning about different cultures, communities, and basic historical concepts</p>
+            
             <h2>Arts</h2>
             <p>Developing creativity and appreciation for the arts through music, visual arts, and drama</p>
+            
             <img src="img/kidslearning.jpg" alt="children bottom" class="bottom-inside">
-    </div>
-    <div class="footer">
-        <span>Learn</span> · <span>Play</span> · <span>Create</span>
+        </div>
+        
+        <div class="footer">
+            <span>Learn</span> · <span>Play</span> · <span>Create</span>
+        </div>
     </div>
 </body>
 </html>
