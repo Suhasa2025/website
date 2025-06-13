@@ -140,7 +140,8 @@
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
-            /* Removed width: 100% to fix the orange overflow issue */
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .nav-links > li > a:hover {
@@ -196,7 +197,8 @@
             font-size: 14px;
             transition: background-color 0.3s ease, color 0.3s ease;
             display: block;
-            /* Removed width: 100% here too for consistency */
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .dropdown-menu a:hover {
@@ -217,14 +219,23 @@
                 width: auto;
                 background: none;
                 box-shadow: none;
+                gap: 5px; /* Add spacing between nav items */
             }
 
             .nav-links > li > a {
-                padding: 10px 15px;
+                padding: 8px 12px; /* Reduced padding for better fit */
                 border-bottom: none;
                 font-size: 14px;
-                border-radius: 6px; /* Added border radius for better button appearance */
-                margin: 0 2px; /* Added small margin between buttons */
+                border-radius: 4px; /* Add rounded corners */
+                white-space: nowrap; /* Prevent text wrapping */
+                width: auto; /* Allow natural width */
+                margin: 0 2px; /* Small margin between items */
+            }
+
+            /* Specific styling for active/highlighted nav item */
+            .nav-links > li > a[style*="background"] {
+                background-color: #f09556 !important;
+                color: white !important;
             }
 
             .dropdown:hover .dropdown-menu {
@@ -235,6 +246,8 @@
                 min-width: 200px;
                 background: white;
                 box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                border-radius: 4px;
+                overflow: hidden;
             }
 
             .dropdown-menu {
@@ -294,8 +307,6 @@
 
     <!-- Why Us Section -->
     <section class="why-us-section">
-        <h2>Why Us</h2>
-
         <!-- Reason 1 -->
         <div class="why-item">
             <img src="img/suhasapic.jpg" alt="Vibrant Learning Space">
