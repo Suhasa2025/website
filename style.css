@@ -392,7 +392,7 @@ h3 {
 .program-card.infant,
 .program-card.discovery,
 .program-card.special {
-    background: linear-gradient(135deg, #df7f9f, #ffba8f);
+    background: linear-gradient(135deg, #FFB5A7, #ffe26e);
 }
 
 .program-card.toddler,
@@ -432,19 +432,44 @@ h3 {
     transform: scale(0.95);
 }
 
+/* Star section */
+.star {
+    text-align: center;
+    padding: 20px 20px;
+    background: #f2acc4;
+    border-radius: 25px;
+    margin: 30px 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.star .para {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    line-height: 1.6;
+}
+
+/* Why Us Section */
 /* Why Us Section */
 .wyus {
     font-size: 2.5rem;
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0;
     padding: 0 15px;
     width: 100%;
     box-sizing: border-box;
+    background: linear-gradient(135deg, #4ECDC4, #44A08D);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Kalam', cursive;
+    font-weight: 700;
 }
 
 .why-us-section {
-    padding: 10px 15px;
-    background-color: rgb(243, 243, 164);
+    padding: 40px 15px;
+    background: linear-gradient(135deg, #A8E6CF);
     width: 100%;
     box-sizing: border-box;
 }
@@ -453,19 +478,29 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     text-align: center;
     width: 100%;
     box-sizing: border-box;
+    background: rgba(255,255,255,0.9);
+    padding: 30px 20px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .why-item img {
     max-width: 100%;
     width: 350px;
     height: 300px;
-    border-radius: 20px;
-    border: 5px solid #b7bd05;
-    margin-bottom: 20px;
+    border-radius: 25px;
+    border: 5px solid #ffba8f;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.why-item:hover img {
+    transform: scale(1.05);
 }
 
 .why-content {
@@ -475,10 +510,29 @@ h3 {
 }
 
 .why-content h3 {
-    font-size: 1.7rem;
-    color: black;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    color: #ffba8f;
+    margin-bottom: 15px;
+    font-family: 'Kalam', cursive;
 }
+
+.why-content ul {
+    text-align: left;
+    color: #2C3E50;
+}
+
+.why-content li {
+    margin: 8px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.why-content li::before {
+    content: '🌟';
+    position: absolute;
+    left: 0;
+}
+
 
 /* Contact Section */
 .hi {
