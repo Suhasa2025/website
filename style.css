@@ -336,12 +336,13 @@ h3 {
 .admission-buttons button {
     padding: 12px 24px;
     border-radius: 20px;
+    border-color: #ccebffba;
     cursor: pointer;
     font-weight: bold;
     transition: transform 0.3s ease;
     font-size: 17px;
     min-width: 200px;
-    max-width: 90%;
+    max-width: 100%;
     touch-action: manipulation;
     box-sizing: border-box;
 }
