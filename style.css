@@ -383,7 +383,7 @@ h3 {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
     height: 700px;
     transition: transform 0.3s ease;
     box-sizing: border-box;
@@ -392,7 +392,7 @@ h3 {
 .program-card.infant,
 .program-card.discovery,
 .program-card.special {
-    background: linear-gradient(135deg, #FFB5A7, #ffe26e);
+    background: linear-gradient(135deg, #ffe26e, #fecf9e);
 }
 
 .program-card.toddler,
@@ -402,16 +402,27 @@ h3 {
 }
 
 .program-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
 .program-image {
     width: 100%;
-    max-width: 250px;
-    height: 250px;
+    max-width: 260px;
+    height: 260px;
     border-radius: 10%;
     display: block;
     margin: 0 auto;
+    border: 2px solid white;
+}
+
+.program-card h2 {
+    color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 2;
+    font-family: 'Kalam', cursive;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .shrink-btn {
@@ -435,7 +446,7 @@ h3 {
 /* Star section */
 .star {
     text-align: center;
-    padding: 20px 20px;
+    padding: 10px 10px;
     background: #f2acc4;
     border-radius: 25px;
     margin: 30px 15px;
@@ -528,7 +539,7 @@ h3 {
 }
 
 .why-content li::before {
-    content: '🌟';
+    content: ' ';
     position: absolute;
     left: 0;
 }
