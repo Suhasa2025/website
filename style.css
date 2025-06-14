@@ -399,7 +399,7 @@ h3 {
 .program-card.toddler,
 .program-card.Kindergarten,
 .program-card.preschool {
-    background: linear-gradient(135deg, #93dda2, #C7CEEA);
+    background: linear-gradient(135deg,  #a8e6cf, #8ec1d0);
 }
 
 .program-card:hover {
@@ -692,7 +692,7 @@ footer .paragraph {
     font-size: 16px;
     font-family: 'Georgia', 'Comic Sans MS', Arial, sans-serif;
     border: none;
-    border-radius: 8px;
+    border-radius: 22px;
     cursor: pointer;
     transition: transform 0.3s ease;
     touch-action: manipulation;
@@ -700,13 +700,13 @@ footer .paragraph {
 }
 
 .know-more-btn {
-    background-color: #4CAF50;
+    background-color: #48b3a5;
     color: white;
 }
 
 .program-btn {
-    background-color: rgb(67, 144, 200);
-    border: 2px solid #6f9dda;
+    background-color: #48b3a5;
+    border: 2px solid #66dccd96;
     color: rgb(255, 255, 255);
 }
 
