@@ -391,16 +391,14 @@ h3 {
 
 .program-card.infant,
 .program-card.discovery,
-.program-card.prekindergarten,
-.program-card.Kindergarten {
-    background-color: peachpuff;
+.program-card.special {
+    background: linear-gradient(135deg, #df7f9f, #ffba8f);
 }
 
 .program-card.toddler,
-.program-card.preschool,
-.program-card.transitional,
-.program-card.special {
-    background-color: rgb(153, 153, 203);
+.program-card.Kindergarten,
+.program-card.preschool {
+    background: linear-gradient(135deg, #93dda2, #C7CEEA);
 }
 
 .program-card:hover {
