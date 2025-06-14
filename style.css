@@ -198,7 +198,7 @@ h3 {
 
 /* Social Icons */
 .social-icons {
-    padding: 10px 15px;
+    padding: 1px;
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -208,9 +208,9 @@ h3 {
 }
 
 .social-icons img.icon-img {
-    width: 50px;
-    height: 45px;
-    border-radius: 50%;
+    width: 45px;
+    height: 40px;
+    border-radius: 30%;
     transition: transform 0.3s ease;
 }
 
@@ -219,9 +219,9 @@ h3 {
 }
 
 .social-icons a {
-    font-size: 50px;
+    font-size: 40px;
     text-decoration: none;
-    padding: 8px;
+    padding: 5px;
 }
 
 .social-icons a.facebook {
@@ -562,8 +562,8 @@ h3 {
 }
 
 .contact-section .paragraph {
-    font-size: 13px;
-    line-height: 1.8;
+    font-size: 14px;
+    line-height: 1.7;
     padding: 0 15px;
     width: 100%;
     box-sizing: border-box;
@@ -622,7 +622,6 @@ footer ul {
     padding: 0 2px;
     display: flex;
     justify-content: center;
-    margin-bottom: 0.4rem;
     flex-wrap: wrap;
     width: 100%;
     box-sizing: border-box;
@@ -630,9 +629,8 @@ footer ul {
 
 footer ul a {
     text-decoration: none;
-    color: #4e6ddd;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
+    color: #48b0a0;
+    padding: 0.1rem 1rem;
     transition: background-color 0.3s, color 0.3s;
 }
 
