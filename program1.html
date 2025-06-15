@@ -39,26 +39,33 @@
     .side-image {
       display: none;
     }
-    .age-badge {
-  background-color:white;
-  color: rgb(14, 12, 12);
+    .program-details {
+  background-color: white;
   padding: 20px;
-  border-radius: 10px;
-  font-weight: bold;
-  display: inline-block;
-  width: 50%;
-  font-family: 'Segoe UI', sans-serif;
+  border-radius: 12px;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-
-.program-details {
+.program-details ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 16px;
-  line-height: 1.8;
 }
+
+.program-details li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+@media (max-width: 600px) {
+    .program-details  {
+        font-size: 16px;
+       padding: 15px;
+    }
+  }
   
 
     .text-content h1 {
@@ -187,12 +194,14 @@
   <div class="content-container">
     <div class="text-content">
       <h1>Pre Kinder Garden I & II</h1>
-        <div class="age-badge">
-          <ul class="program-details">
-          <li>👶2+ years old for Pre-I (Toddler)<br>
-                3+ years old for Pre-II (Nursery)</li>
-          <li>🕘 9:00 AM to 1:00 PM </li>
-        </ul>
+
+        <div class="program-details">
+          <ul>
+            <li>👶2+ years old for Pre-I (Toddler)</li>
+            <li>3+ years old for Pre-II (Nursery)</li>
+            <li>🕘 9:00 AM to 1:00 PM </li>
+          </ul>
+          
       </div>
          
         </div>
