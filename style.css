@@ -449,14 +449,13 @@ h3 {
 .star {
     text-align: center;
     padding: 10px 10px;
-    background:rgb(15, 182, 90);
     border-radius: 25px;
     margin: 30px 15px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
 .star .para {
-    color: white;
+    color: rgb(15, 182, 90);
     font-size: 20px;
     font-weight: 600;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
