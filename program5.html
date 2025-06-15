@@ -11,7 +11,7 @@
   <style>
     /* ✅ Base Styles */
     body {
-      background-color: #faf6ed;
+      background-color: #c4ab70;
       margin: 0;
       padding: 0;
       font-family: 'Lato', Arial, sans-serif;
@@ -23,7 +23,7 @@
       max-width: 800px;
       margin: 50px auto;
       padding: 50px 20px;
-      background-color: #fff;
+      background-color: #f8f5ca;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       text-align: center;
       border-radius: 8px;
@@ -40,22 +40,31 @@
     }
 
     .age-badge {
-      background: linear-gradient(45deg, #9c27b0, #ba68c8);
-      color: white;
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: bold;
-      display: inline-block;
-      margin-bottom: 15px;
-      box-shadow: 0 2px 8px rgba(156, 39, 176, 0.3);
-    }
+  background-color:#f8f5ca;
+  color: rgb(14, 12, 12);
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  display: inline-block;
+  width: 50%;
+  font-family: 'Segoe UI', sans-serif;
+}
 
+
+
+.program-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8;
+}
+  
     .text-content h1 {
       font-size: 32px;
       color: #333;
       margin-bottom: 20px;
-      background-color: aqua;
+      background: linear-gradient(45deg, #FFD700, #FFA500);
       display: inline-block;
       padding: 8px 16px;
       border-radius: 25px;
@@ -66,6 +75,10 @@
       color: #444;
       margin-top: 20px;
       margin-bottom: 8px;
+    }
+    .text-h2{
+      color: #4b70d4;
+    
     }
 
     .text-content p {
@@ -131,37 +144,46 @@
   <div class="content-container">
 
     <div class="text-content">
-      <div class="age-badge">Ages 3-4 years</div><br>
       <h1>Kinder Garden I & II</h1><br>
-      <p>Our Kinder garden program is designed to prepare children aged 3-4 years for their educational journey ahead. Our comprehensive curriculum focuses on:</p>
-
-      <h2>Language and Literacy Development</h2>
+      <div class="age-badge">
+        <ul class="program-details">
+          <li>👶 4+ years old for Kg-I (LKG)
+            <br>5+ years old for Kg-II(UKG)</li>
+          <li>🕘 9:00 AM to 1:30 PM </li>
+        </ul>
+      </div>
+      </div>
+      <br>
+  
+      <p>Our Kindergarden program is designed to prepare children aged 3-4 years for their educational journey ahead. Our comprehensive curriculum focuses on:</p>
+       <br>
+      <h2 class="text-h2">Language and Literacy Development</h2>
       <p>Listening and speaking, vocabulary building, pre-reading skills, and understanding rhyme and rhythm.</p>
-
-      <h2>Mathematical Development</h2>
+       <br>
+      <h2 class="text-h2">Mathematical Development</h2>
       <p>Number recognition, problem-solving skills, and understanding shapes and sizes.</p>
-
-      <h2>Self-Regulation</h2>
+       <br>
+      <h2 class="text-h2">Self-Regulation</h2>
       <p>Managing emotions and learning to express feelings appropriately.</p>
-
-      <h2>Social Skills</h2>
+      <br>
+      <h2 class="text-h2">Social Skills</h2>
       <p>Sharing, taking turns, and developing cooperation with peers.</p>
-
-      <h2>Following Instructions</h2>
+      <br>
+      <h2 class="text-h2">Following Instructions</h2>
       <p>Understanding and following simple instructions and daily routines.</p>
-
-      <h2>Self-Help Skills</h2>
+       <br>
+      <h2 class="text-h2">Self-Help Skills</h2>
       <p>Practicing independence through age-appropriate self-help activities.</p>
-
-      <h2>Physical Development</h2>
+       <br>
+      <h2 class="text-h2">Physical Development</h2>
       <p>Enhancing gross motor skills and developing fine motor coordination.</p>
-
-      <h2>Creative Development</h2>
+       <br>
+      <h2 class="text-h2">Creative Development</h2>
       <p>Fostering imagination and creativity through exploration and discovery.</p>
-
-      <h2>Family Engagement</h2>
+      <br>
+      <h2 class="text-h2">Family Engagement</h2>
       <p>Building strong home-school connections and encouraging parental involvement.</p>
-
+       <br>
       <img src="img/kidstalking.jpg" alt="children bottom" class="bottom-inside" />
     </div>
 
@@ -169,6 +191,7 @@
       <span>Learn</span> · <span>Play</span> · <span>Create</span>
     </div>
   </div>
+  
 
   <!-- ✅ Script to Load Navbar -->
   <script>
