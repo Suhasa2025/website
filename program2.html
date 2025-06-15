@@ -1,133 +1,483 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>grade 1/+6years</title>
-
+    <title>Grade I and II</title>
     <style>
         * {
-            margin: 0;
-            padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: Arial, sans-serif;
-            background-color: #fff;
-            color: #333;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #fffbe6 0%, #ffffff 100%);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
         }
-
-        /* Navbar container */
-        #navbar-container {
-           
+        
+        .poster {
+            max-width: 1200px;
+            width: 90%;
+            margin: 30px auto;
+            padding: 40px;
+            background: linear-gradient(145deg, #ffffff 0%, #ffffff 100%);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .poster::before {
+            content: '';
+            position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            z-index: 1000; /* Ensure navbar stays on top */
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #8BC34A, #4CAF50, #2E7D32);
         }
-
-        /* Main Content Container */
-        .container {
-            max-width: 700px;
-            padding: 40px;
-            border: 5px solid #fdd835; /* Border added */
-            border-radius: 15px;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        
+        .header {
             text-align: center;
-          
-            
-            /* Push content down to avoid overlapping the navbar */
-            margin: 150px auto; /* Centered horizontally and adjusted vertically */
+            background: linear-gradient(135deg, #8BC34A 0%, #4CAF50 100%);
+            padding: 25px 30px;
+            border-radius: 15px;
+            color: white;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(139, 195, 74, 0.3);
+            position: relative;
+            overflow: hidden;
         }
-        .program-details ul{
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(180deg); }
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 1;
+        }
+        .age-badge {
+        color: rgb(14, 12, 12);
+        padding-left: 450px;
+        border-radius: 10px;
+        font-weight: bold;
+        display: inline-block;
+        font-family: 'Segoe UI', sans-serif;
+        text-align: center;
+        
+        }
+        .program-details{
             list-style-type: none;
-            line-height:1.6;
+        text-align: center;
         }
-        h1 {
-            font-size: 36px;
-            line-height: 1.2;
-            text-transform: uppercase;
+
+
+
+        
+        .section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+            gap: 40px;
+            padding: 30px;
+            border-radius: 15px;
+            background: linear-gradient(145deg, #ffffff 0%, #ffffff 100%);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(139, 195, 74, 0.05), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .section:hover::before {
+            left: 100%;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .section.reverse {
+            flex-direction: row-reverse;
+        }
+        
+        .text {
+            flex: 1;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .text h2 {
+            color: #2E7D32;
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
             margin-bottom: 20px;
+            font-weight: bold;
+            position: relative;
+            padding-bottom: 10px;
         }
-
-        .highlight {
-            background: #fdd835;
-            padding: 0 10px;
+        
+        .text h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #8BC34A, #4CAF50);
+            border-radius: 2px;
         }
+        
+        .text ul {
+            list-style: none;
+            padding-left: 0;
+            line-height: 1.8;
+        }
+        
+        .text li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 30px;
+            color: #444;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            transition: color 0.3s ease;
+        }
+        
+        .text li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .text li:hover {
+            color: #2E7D32;
+            transform: translateX(5px);
+            transition: all 0.3s ease;
+        }
+        
+        .image {
+            flex: 0 0 280px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .image img {
+            width: 100%;
+            max-width: 280px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        
+        .image img:hover {
+            transform: scale(1.05) rotate(1deg);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+        
         .footer {
-    background-color: #FFD700;
-    text-align: center;
-    padding: 15px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    border-radius: 8px;
-}
-
-.footer span:nth-child(1) {
-    color: #B22222;
-}
-.footer span:nth-child(3) {
-    color: #1E90FF;
-}
-
-
-        p {
-            font-size: 18px;
-            text-align: left;
-            margin-top: 20px;
+            background: linear-gradient(135deg, #FFD700 0%, #FFC107 100%);
+            text-align: center;
+            padding: 25px;
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: bold;
+            color: #333;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+            animation: footerShimmer 4s ease-in-out infinite;
+        }
+        
+        @keyframes footerShimmer {
+            0%, 100% { transform: scale(0.8) rotate(0deg); }
+            50% { transform: scale(1.2) rotate(180deg); }
+        }
+        
+        .footer span {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer span:nth-child(1) {
+            color: #B22222;
+        }
+        
+        .footer span:nth-child(3) {
+            color: #1E90FF;
+        }
+        
+        /* Loading animation for navbar */
+        #navbar-container {
+            min-height: 60px;
+            background: linear-gradient(90deg, #f0f0f0 25%, transparent 37%, #f0f0f0 63%);
+            background-size: 400% 100%;
+            animation: navbarShimmer 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes navbarShimmer {
+            0% { background-position: 100% 0; }
+            100% { background-position: -100% 0; }
+        }
+        
+        #navbar-container.loaded {
+            animation: none;
+            background: none;
+            min-height: auto;
         }
 
-        .header-image {
-            width: 300px;
-            margin-top: 30px;
+        /* Tablet Styles */
+        @media (max-width: 768px) {
+            .poster {
+                width: 95%;
+                padding: 25px;
+                margin: 20px auto;
+            }
+            
+            .section {
+                flex-direction: column !important;
+                text-align: center;
+                gap: 25px;
+                padding: 25px;
+                margin-bottom: 40px;
+            }
+            
+            .section.reverse {
+                flex-direction: column !important;
+            }
+            
+            .text {
+                width: 100%;
+                padding: 15px;
+            }
+            
+            .text h2::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .text li {
+                text-align: left;
+            }
+            
+            .image {
+                flex: none;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .image img {
+                max-width: 300px;
+                height: 250px;
+            }
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 480px) {
+            .poster {
+                width: 98%;
+                padding: 20px;
+                margin: 10px auto;
+            }
+            
+            .header {
+                padding: 25px 20px;
+                margin-bottom: 30px;
+            }
+            
+            
+            .section {
+                margin-bottom: 30px;
+                gap: 20px;
+                padding: 20px;
+            }
+            
+            .text {
+                padding: 10px;
+            }
+            
+            .text li {
+                font-size: 0.95rem;
+            }
+            
+            .image img {
+                max-width: 250px;
+                height: 250px;
+            }
+            
+            .footer {
+                padding: 20px;
+                margin-top: 25px;
+            }
+        }
+
+        /* Extra small mobile */
+        @media (max-width: 320px) {
+            .poster {
+                padding: 15px;
+            }
+            
+            .section {
+                padding: 15px;
+            }
+            
+            .text li {
+                font-size: 0.9rem;
+                padding: 5px 0;
+            }
+            
+            .image img {
+                max-width: 200px;
+                height: 200px;
+            }
+            
+            .footer {
+                padding: 15px;
+            }
         }
     </style>
-
-    <script>
-        // Load navbar dynamically
-        document.addEventListener("DOMContentLoaded", () => {
-            fetch('navbar.html')
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById('navbar-container').innerHTML = html;
-                })
-                .catch(error => console.error('Error loading navbar:', error));
-        });
-    </script>
-
 </head>
 
 <body>
-
-    <!-- Navbar Container -->
+    <!-- Navbar will be loaded here -->
     <div id="navbar-container"></div>
-
-    <!-- Main Content -->
-    <div class="container">
-        <h1><span class="highlight">Grade 1/+6years<br></span></h1>
-        <div class="program-details">
-            <ul>
-              <li>🗓️5 Days a week(Mon - Fri)</li>
-              <li>🕘 9:00 AM to 2:30 PM IST</li> 
-            </ul>
+    
+    <script>
+        // Load the navbar using fetch
+        document.addEventListener("DOMContentLoaded", () => {
+            const navbarContainer = document.getElementById('navbar-container');
             
+            fetch('navbar.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch navbar');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    navbarContainer.innerHTML = html;
+                    navbarContainer.classList.add('loaded');
+                })
+                .catch(error => {
+                    console.error('Error loading navbar:', error);
+                    navbarContainer.innerHTML = '<div style="padding: 10px; text-align: center; color: #666;">Navigation menu unavailable</div>';
+                    navbarContainer.classList.add('loaded');
+                });
+        });
+    </script>
+
+    <div class="poster">
+        <div class="header">
+            <h1>Grade 2/+7 years</h1>
         </div>
-
-        <p>
-            A Pre-primary and early childhood school designed to nurture and support the development of young children,
-            from ages +6 years through play-based learning and structured activities, nurturing their cognitive, social,
-            emotional, and physical skills.
-        </p>
-
-        <img src="img/kidscircle.jpg" alt="Kids holding hands in a circle" class="header-image">
+        <div class="program-details">
+              <p>👶+7 years</p>
+              <p>🗓️5 Days a week(Mon - Fri)</p>
+              <p>🕘 9:00 AM to 2:30 PM IST</p>
+        </div>  
+        </div>
+           
+            <br>
+        
+        <div class="section reverse">
+            <div class="image">
+                <img src="img/kida.jpg" alt="Kids reading">
+            </div>
+            <div class="text">
+                <h2>Literacy</h2>
+                <ul>
+                    <li>Phonemic awareness</li>
+                    <li>Phonics</li>
+                    <li>Vocabulary Development</li>
+                    <li>Reading fluency</li>
+                    <li>Comprehension</li>
+                    <li>Developing writing skills</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="image">
+                <img src="img/kidswritingboard.jpg" alt="Kids writing">
+            </div>
+            <div class="text">
+                <h2>Numeracy</h2>
+                <ul>
+                    <li>Number Recognition and counting</li>
+                    <li>Basic math operations</li>
+                    <li>Problem solving</li>
+                    <li>Measurement and Basic geometry</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section reverse">
+            <div class="image">
+                <img src="img/kidstable.jpg" alt="Kids reading together">
+            </div>
+            <div class="text">
+                <h2>Social and Emotional development</h2>
+                <ul>
+                    <li>Self-Awareness</li>
+                    <li>Empathy</li>
+                    <li>Fine Motor skills</li>
+                    <li>Gross Motor skills</li>
+                    <li>Coordination</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <span>Learn</span> · <span>Play</span> · <span>Create</span>
+        </div>
     </div>
-    <div class="footer">
-        <span>Learn</span> · <span>Play</span> · <span>Create</span>
-    </div>
-
 </body>
-
 </html>
