@@ -24,11 +24,18 @@
             padding: 40px;
             width: 100%;
             max-width: 600px;
+            
         }
         h2 {
             color: #2c3e50;
             text-align: center;
         }
+        .school-time {
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+       
         label {
             font-weight: bold;
             display: block;
@@ -61,6 +68,26 @@
 <body>
     <div class="container">
         <h2>Book Appointment</h2>
+        <div style="text-align: center; font-family: Arial, sans-serif; margin-bottom: 20px;">
+            <p style="font-size: 18px; font-weight: bold; color: #e60073;">
+              📍 <span style="color: #e60073;">School Timings</span>
+            </p>
+            <table style="margin: 0 auto; font-size: 16px; color: #333; border-spacing: 10px 4px;">
+              <tr>
+                <td style="text-align: right; font-weight: bold; white-space: nowrap;">Monday–Friday:</td>
+                <td style="text-align: left; white-space: nowrap;">9:00 AM to 4:00 PM</td>
+              </tr>
+              <tr>
+                <td style="text-align: right; font-weight: bold; white-space: nowrap;">Saturday:</td>
+                <td style="text-align: left; white-space: nowrap;">9:00 AM to 1:30 PM</td>
+              </tr>
+              <tr>
+                <td colspan="2" style="padding-top: 6px; text-align: center; color: gray;">
+                  (Sunday Closed)
+                </td>
+              </tr>
+            </table>
+          </div>
             <!-- ✅ Start of FormSubmit form -->
         <form action="https://formsubmit.co/suhasaearlylearning@gmail.com" method="POST">
             <!-- Hidden config -->
