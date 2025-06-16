@@ -463,6 +463,39 @@ h3 {
 }
 
 /* Why Us Section */
+.wyus {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 30px 0;
+    padding: 0 15px;
+    width: 100%;
+    box-sizing: border-box;
+    
+    /* Enhanced gradient text with fallbacks */
+    background: linear-gradient(135deg, rgb(145, 108, 214), rgb(120, 85, 190));
+    background: -webkit-linear-gradient(135deg, rgb(145, 108, 214), rgb(120, 85, 190));
+    background: -moz-linear-gradient(135deg, rgb(145, 108, 214), rgb(120, 85, 190));
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
+    /* Fallback color for unsupported devices */
+    color: rgb(145, 108, 214);
+    
+    font-family: 'Kalam', cursive;
+    font-weight: 700;
+}
+
+/* Support check for background-clip */
+@supports not (-webkit-background-clip: text) {
+    .wyus {
+        background: none;
+        color: rgb(145, 108, 214);
+    }
+}
+
+/* Why Us Section */
 .why-us-section {
     padding: 40px 15px;
     width: 100%;
@@ -487,19 +520,7 @@ h3 {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
-.why-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
-    background: rgba(255,255,255,0.9);
-    padding: 30px 20px;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
+
 
 .why-item {
     display: flex;
