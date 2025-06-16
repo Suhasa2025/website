@@ -214,12 +214,30 @@
             text-align: center;
             background: linear-gradient(135deg, #e67e22, #d35400);
             color: white;
-            padding: 20px 20px;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-join-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(255,255,255,0.1) 100%);
+            pointer-events: none;
         }
 
         .why-join-section h1 {
             margin: 0;
-            font-size: 3em;
+            font-size: 3.5em;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
         }
 
         /* Content Section */
@@ -248,40 +266,32 @@
         .text-p{
             text-align: center;
             margin-top: 20px;
-            background-color: rgb(236, 236, 188);
+            background-color: #fff3cd;
             display: inline-block;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 15px 25px;
+            border-radius: 10px;
+            border: 2px solid #ffeaa7;
+            box-shadow: 0 2px 8px rgba(255, 221, 53, 0.2);
         }
         .content-center{
             text-align: center;
         }
             .paragraph{
                 margin-left: 10px;
+                text-align: center;
+                color: #666;
             }
         
-        .content-text-program{
-            padding:0 100px;
-            text-align: left;
-            line-height: 1.8;
-        }
-        .content-text-program p{
-            font-size: 1em;
-            line-height: 1.6;
-        }
-        .content-text-program h2{
-            text-align: center;
-        }
         .content-text h2 {
             font-size: 2em;
-            margin-bottom: 3px;
+            margin-bottom: 20px;
             text-align: center;
+            color: #fdd835;
         }
 
         .content-text p {
             line-height: 1.8;
             color: #555;
-            margin-bottom: 3px ;
         }
 
         .content-image {
@@ -379,8 +389,10 @@
                         </strong>
                     </p>
                 </div>
+                
                 <br>
-                <p class="paragraph"> “Growing Minds, Nuturing Heart”<br>
+                
+                <p class="paragraph"> "Growing Minds, Nuturing Heart"<br>
               A place for your child's first steps, words and friendships begin under the loving care of trained SUHASA team.
               </p>
             </div>
@@ -400,8 +412,11 @@
                          Half Day: 9:00 am-1:00 pm</strong>
                         </p>
                 </div>
-               <br>
-                <p class="paragraph"> “Where Little Learner’s Begin Big Adventures” <br>
+               
+                <br>
+                
+            
+                <p class="paragraph"> "Where Little Learner's Begin Big Adventures" <br>
               At SUHASA,we nurture curious minds while setting the foundation for a lifetime of learning.<br>
               </p>
             </div>
@@ -418,14 +433,16 @@
                 <p class="text-p">
                     <strong> 
                         4+ years old for Kg-I (LKG)  <br>
-                        5+ years old for Kg-II(UKG)  <br>
+                        5+ years old for Kg-II(UKG)  <br>
                         Half Day: 9:00 am-1:00 pm</strong>
         
                     </p> 
                 </div>
+                
                 <br>
-                <p class="paragraph">“Stepping into a lifetime of discovery with little explorers learning to take big steps” <br>
-              At SUHASA,we nurture curious minds and kind hearts in a world of discovery. Building tomorrow’s brightest stars through play, creativity and joy.<br>
+                
+                <p class="paragraph">"Stepping into a lifetime of discovery with little explorers learning to take big steps" <br>
+              At SUHASA,we nurture curious minds and kind hearts in a world of discovery. Building tomorrow's brightest stars through play, creativity and joy.<br>
             </div>
             <div class="content-image">
                 <img src="img/programms3.jpeg" alt="Diversity and Culture">
@@ -442,12 +459,13 @@
                   
         </div>
         
-            <br>
+        <br>
+            
         <p class="paragraph">Strengthening bonds around the classroom as part of a global community.<br>
             
                 </div>
                 <div class="content-image">
-                    <img src="img/preprogramms5.jpeg" alt="Learning Space">
+                    <img src="img/kid 2.jpg" alt="Learning Space">
                 </div>
             </div>
      
@@ -460,7 +478,9 @@
             <strong>Target Number of students: 20 per class <br> Half Day: 9:00 am-1:30 pm </strong>
         </p>
         </div>
+        
         <br>
+        
         <p class="paragraph">Establishing healthy habits to become socially responsible global citizens.
             </p>
                 </div>
@@ -477,7 +497,9 @@
                 <strong>Target Number of students: 25 per class <br> Full Day: 9:00 am-2:30 pm </strong>
             </p>
         </div>
-       <br>
+       
+        <br>
+       
         <p class="paragraph"> Engaging students in a literacy based, thematic and integrated curriculum of math, language arts, social studies & science, as well as continuing their cognitive and social development.<br>
 </p>
     </div>
@@ -495,12 +517,14 @@
                 <strong>Target Number of students: 25 per class <br> Full Day: 9:00 am-2:30 pm </strong>
             </p>
         </div>
+        
         <br>
+        
         <p class="paragraph">Building on top of social, language, and literacy skills learned earlier in Grade 1, by expanding upon them, immersing students in a structured curriculum that develops curiosity and retention of information around a variety of subjects.
             </p>
     </div>
     <div class="content-image">
-        <img src="img/preprogramms9.jpeg" alt="Learning Space">
+        <img src="img/kid 5.jpeg" alt="Learning Space">
     </div>
 </div>
      
@@ -508,27 +532,26 @@
  <div class="content-card">
     <div class="content-text">
         <h2> Parent-Toddler Programs</h2>
-        
         <p class="paragraph"> Designed for parents and toddlers to participate together, fostering bonding and early development.</p>
     </div>
     <div class="content-image">
         <img src="img/kids 2.jpg" alt="Learning Space">
     </div>
 </div>
-    </div>
-     
- <!-- Card 9-->
+
+         <!-- Card 9 - Fixed -->
  <div class="content-card">
-    <div class="content-text-program">
+    <div class="content-text">
         <h2>Special Program</h2>
-        
-        <p><b>Summer Camps: </b>Engaging activities during summer to continue learning and social interaction.
-           <br><b>After-School Enrichment:</b>Additional programs focusing on arts, sports, or academics beyond regular school hours. </p>
+        <p class="paragraph"><b>Summer Camps: </b>Engaging activities during summer to continue learning and social interaction.
+           <br><b>After-School Enrichment:</b> Additional programs focusing on arts, sports, or academics beyond regular school hours. </p>
     </div>
     <div class="content-image">
-        <img src="img/programms4.jpeg" alt="Learning Space">
+        <img src="img/kid1.webp" alt="Learning Space">
     </div>
 </div>
+    </div>
+     
 
 
     <script>
@@ -591,7 +614,6 @@
 </body>
 
 </html>
-
 
 
 
