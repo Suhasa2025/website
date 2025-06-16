@@ -387,6 +387,7 @@ h3 {
     width: 100%;
     max-width: 420px;
     height: 700px;
+    margin-bottom: 2rem;
     transition: transform 0.3s ease;
     box-sizing: border-box;
 }
