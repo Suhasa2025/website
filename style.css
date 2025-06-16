@@ -463,27 +463,42 @@ h3 {
 }
 
 /* Why Us Section */
-/* Why Us Section */
-.wyus {
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 30px 0;
-    padding: 0 15px;
-    width: 100%;
-    box-sizing: border-box;
-    background: rgb(145, 108, 214);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: 'Kalam', cursive;
-    font-weight: 700;
-}
-
 .why-us-section {
     padding: 40px 15px;
-    background: linear-gradient(135deg, rgb(218, 240, 184));
     width: 100%;
     box-sizing: border-box;
+    
+    /* Multiple background fallbacks for better compatibility */
+    background-color: rgb(218, 240, 184); /* Solid fallback */
+    background: rgb(218, 240, 184); /* Basic fallback */
+    background: -webkit-linear-gradient(135deg, rgb(218, 240, 184), rgb(200, 230, 170));
+    background: -moz-linear-gradient(135deg, rgb(218, 240, 184), rgb(200, 230, 170));
+    background: -o-linear-gradient(135deg, rgb(218, 240, 184), rgb(200, 230, 170));
+    background: linear-gradient(135deg, rgb(218, 240, 184), rgb(200, 230, 170));
+    
+    /* Ensure background covers entire area */
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* Force hardware acceleration on Android */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.why-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.9);
+    padding: 30px 20px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .why-item {
@@ -877,11 +892,14 @@ footer .paragraph {
     .image-container {
         height: 750px;
     }
-    
-    .why-us-section {
+
+        .why-us-section {
         padding: 80px 50px;
-         background:linear-gradient(135deg, rgb(218, 240, 184));
+        /* Maintain the same background properties as base */
+        background-color: rgb(218, 240, 184);
+        background: linear-gradient(135deg, rgb(218, 240, 184), rgb(200, 230, 170));
     }
+
     
     .ant {
         max-width: 220px;
@@ -965,6 +983,35 @@ footer .paragraph {
     
     .logo {
         animation: none;
+    }
+}
+
+/* Specific fixes for Samsung devices and older Android browsers */
+@media screen and (-webkit-min-device-pixel-ratio: 1) {
+    .why-us-section {
+        /* Force repaint on Samsung devices */
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Fallback for devices that don't support CSS gradients */
+.no-cssgradients .why-us-section {
+    background-color: rgb(218, 240, 184) !important;
+    background-image: none !important;
+}
+
+/* Force background rendering on problematic devices */
+@media screen and (max-width: 480px) {
+    .why-us-section {
+        /* More aggressive hardware acceleration for mobile */
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        
+        /* Ensure background is painted */
+        will-change: background;
+        contain: layout style paint;
     }
 }
 
