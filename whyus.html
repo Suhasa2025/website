@@ -3,227 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>why us</title>
-     <style>
-         @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-    /* Reset default browser margins and padding */
-    * {
-
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-    }
-
-    html {
-        margin: 0;
-        padding: 0;
-    }
-
-    .header-image {
-      display: block;
-      margin: 0 auto;
-      max-width: 200px; /* Adjust width as needed */
-      margin-top: 1cm;
-    }
-
-    .center-title {
-      text-align: center;
-      color: #cc6600; /* Optional: for orange title */
-    }
-
-/* Why Us Section */
-.wyus {
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 30px 0;
-    padding: 0 15px;
-    width: 100%;
-    box-sizing: border-box;
-    background:  rgb(145, 108, 214);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: 'Kalam', cursive;
-    font-weight: 700;
-}
-
-.why-us-section {
-    padding: 60px 20px;
-    background:linear-gradient(135deg, rgb(218, 240, 184));
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.why-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 60px;
-    text-align: left;
-    width: 100%;
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 60px;
-    box-sizing: border-box;
-    background: white;
-    padding: 50px 40px;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    flex-direction: row;
-    gap: 60px;
-}
-
-.why-item.reverse {
-    flex-direction: row-reverse;
-}
-
-.why-item img {
-    flex-shrink: 0;
-    width: 350px;
-    height: 280px;
-    border-radius: 25px;
-    border: 5px solid  #f7a471;
-    transition: transform 0.3s ease;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    object-fit: cover;
-}
-
-.why-item:hover img {
-    transform: scale(1.05);
-}
-
-.why-content {
-    flex: 1;
-    min-width: 0;
-    padding: 20px 0;
-}
-
-.why-content h3 {
-    font-size: 2rem;
-    color: #eb96c0;
-    text-align: center;
-    margin-bottom: 25px;
-    font-family: 'Kalam', cursive;
-    font-weight: 600;
-}
-
-.why-content ul {
-    text-align: left;
-    color: #2C3E50;
-    padding-left: 25px;
-    margin-top: 10px;
-}
-
-.why-content li {
-    margin: 12px 0;
-    font-size: 1.2rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    line-height: 1.5;
-}
-
-.why-content .paragraph {
-    font-size: 1.2rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    line-height: 1.7;
-    color: #2C3E50;
-    margin-top: 10px;
-}
-
+    <title>Why Us - Suhasa Early Learning</title>
     
-    /* Mobile Styles */
-    @media screen and (max-width: 768px) {
+    <!-- Font imports moved to head -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset default browser margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-image {
+            display: block;
+            margin: 0 auto;
+            max-width: 200px;
+            margin-top: 1cm;
+        }
+
+        .center-title {
+            text-align: center;
+            color: #cc6600;
+        }
+
+        /* Why Us Section - Fixed gradient and font issues */
         .wyus {
-            font-size: 2rem;
+            font-size: 2.5rem;
+            text-align: center;
             margin: 30px 0;
+            padding: 0 15px;
+            width: 100%;
+            box-sizing: border-box;
+            background: linear-gradient(135deg, #916cd6, #e091c4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            /* Fixed font fallbacks */
+            font-family: 'Kalam', 'Comic Sans MS', 'Marker Felt', cursive, sans-serif;
+            font-weight: 700;
+            /* Fallback color for browsers that don't support background-clip */
+            color: #916cd6;
+        }
+
+        /* Support for older browsers */
+        @supports not (-webkit-background-clip: text) {
+            .wyus {
+                background: none;
+                color: #916cd6;
+                -webkit-text-fill-color: initial;
+            }
         }
 
         .why-us-section {
-            padding: 40px 15px;
-            background:linear-gradient(135deg, rgb(218, 240, 184));
+            padding: 60px 20px;
+            /* Fixed gradient syntax */
+            background: linear-gradient(135deg, #daf0b8 0%, #e8f5d0 100%);
+            /* Fallback background */
+            background-color: #daf0b8;
+            width: 100%;
+            box-sizing: border-box;
+            min-height: 100vh;
         }
 
         .why-item {
-            flex-direction: column;
-            text-align: center;
-            padding: 40px 25px;
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-        
-        .why-item.reverse {
-            flex-direction: column;
-        }
-        
-        .why-item img {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            text-align: left;
             width: 100%;
-            max-width: 300px;
-            height: 220px;
-            margin: 0 auto;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 60px;
+            box-sizing: border-box;
+            background: white;
+            padding: 50px 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            flex-direction: row;
+            gap: 60px;
+        }
+
+        .why-item.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .why-item img {
+            flex-shrink: 0;
+            width: 350px;
+            height: 280px;
+            border-radius: 25px;
+            border: 5px solid #f7a471;
+            transition: transform 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            object-fit: cover;
+            /* Placeholder for missing images */
+            background-color: #f0f0f0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f0f0f0"/><text x="50" y="50" text-anchor="middle" dy="0.35em" font-family="Arial" font-size="12" fill="%23999">Image</text></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .why-item:hover img {
+            transform: scale(1.05);
         }
 
         .why-content {
-            text-align: center;
-            padding: 10px 0;
+            flex: 1;
+            min-width: 0;
+            padding: 20px 0;
         }
 
         .why-content h3 {
-            font-size: 1.6rem;
-            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #eb96c0;
+            text-align: center;
+            margin-bottom: 25px;
+            font-family: 'Kalam', 'Comic Sans MS', 'Marker Felt', cursive, sans-serif;
+            font-weight: 600;
         }
 
         .why-content ul {
             text-align: left;
-            max-width: 280px;
-            margin: 15px auto;
+            color: #2C3E50;
+            padding-left: 25px;
+            margin-top: 10px;
+        }
+
+        .why-content li {
+            margin: 12px 0;
+            font-size: 1.2rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            line-height: 1.5;
         }
 
         .why-content .paragraph {
-            font-size: 1.1rem;
-            text-align: center;
-            line-height: 1.6;
-            margin-top: 15px;
-        }
-    }
-
-    /* Extra small mobile devices */
-    @media screen and (max-width: 480px) {
-        .wyus {
-            font-size: 1.8rem;
+            font-size: 1.2rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            line-height: 1.7;
+            color: #2C3E50;
+            margin-top: 10px;
         }
 
-        .why-us-section {
-            padding: 30px 10px;
-             background:linear-gradient(135deg, rgb(218, 240, 184));
-        }
-
-        .why-item {
-            padding: 30px 20px;
-            margin-bottom: 40px;
-        }
-
-        .why-item img {
-            max-width: 280px;
-            height: 200px;
-        }
-
-        .why-content h3 {
-            font-size: 1.4rem;
-        }
-
-        .why-content .paragraph {
-            font-size: 1rem;
-        }
-    }
-
-    /* Navbar Styles */
+        /* Navbar Styles */
         .announcement-bar {
             background-color: rgb(221, 244, 220);
             color: rgb(0, 0, 0);
@@ -233,13 +173,14 @@
             font-size: 16px;
             width: 100%;
             margin: 0;
+            overflow: hidden;
         }
 
         .announcement-bar a {
             color: #118a03;
             text-align: center;
             font-weight: bold;
-            font-family: 'Kalam', 'Papyrus', cursive;
+            font-family: 'Kalam', 'Comic Sans MS', cursive, sans-serif;
             text-decoration: underline;
             font-size: 20px;
         }
@@ -260,6 +201,9 @@
         .logo img {
             height: 90px;
             width: auto;
+            /* Placeholder for logo */
+            background-color: #f0f0f0;
+            border-radius: 8px;
         }
 
         .menu-toggle {
@@ -371,6 +315,110 @@
             color: #333;
         }
 
+        /* Mobile Styles - Enhanced for better compatibility */
+        @media screen and (max-width: 768px) {
+            .wyus {
+                font-size: 2rem;
+                margin: 30px 0;
+                /* Ensure background is visible on mobile */
+                background: linear-gradient(135deg, #916cd6 0%, #e091c4 100%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            /* Mobile fallback for gradient text */
+            @supports not (-webkit-background-clip: text) {
+                .wyus {
+                    background: none;
+                    color: #916cd6;
+                }
+            }
+
+            .why-us-section {
+                padding: 40px 15px;
+                background: linear-gradient(135deg, #daf0b8 0%, #e8f5d0 100%);
+                background-color: #daf0b8; /* Fallback */
+            }
+
+            .why-item {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 25px;
+                gap: 30px;
+                margin-bottom: 50px;
+            }
+            
+            .why-item.reverse {
+                flex-direction: column;
+            }
+            
+            .why-item img {
+                width: 100%;
+                max-width: 300px;
+                height: 220px;
+                margin: 0 auto;
+            }
+
+            .why-content {
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            .why-content h3 {
+                font-size: 1.6rem;
+                margin-bottom: 20px;
+            }
+
+            .why-content ul {
+                text-align: left;
+                max-width: 280px;
+                margin: 15px auto;
+            }
+
+            .why-content .paragraph {
+                font-size: 1.1rem;
+                text-align: center;
+                line-height: 1.6;
+                margin-top: 15px;
+            }
+        }
+
+        /* Extra small mobile devices */
+        @media screen and (max-width: 480px) {
+            .wyus {
+                font-size: 1.8rem;
+                background: linear-gradient(135deg, #916cd6 0%, #e091c4 100%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .why-us-section {
+                padding: 30px 10px;
+                background: linear-gradient(135deg, #daf0b8 0%, #e8f5d0 100%);
+                background-color: #daf0b8; /* Fallback */
+            }
+
+            .why-item {
+                padding: 30px 20px;
+                margin-bottom: 40px;
+            }
+
+            .why-item img {
+                max-width: 280px;
+                height: 200px;
+            }
+
+            .why-content h3 {
+                font-size: 1.4rem;
+            }
+
+            .why-content .paragraph {
+                font-size: 1rem;
+            }
+        }
+
         /* Desktop Styles */
         @media (min-width: 769px) {
             .menu-toggle {
@@ -411,50 +459,37 @@
             }
         }
 
-  </style>
-
-    <script>
-        // Load the navbar using fetch
-        document.addEventListener("DOMContentLoaded", () => {
-            fetch('navbar.html')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Failed to fetch navbar');
-                    }
-                    return response.text();
-                })
-                .then(html => {
-                    document.getElementById('navbar-container').innerHTML = html;
-                })
-                .catch(error => console.error('Error loading navbar:', error));
-        });
-    </script>
- 
+        /* Loading states for fonts */
+        .font-loading .wyus,
+        .font-loading .why-content h3,
+        .font-loading .announcement-bar a {
+            font-family: Arial, sans-serif;
+        }
+    </style>
 </head>
 <body>
-
-  <!-- Top Announcement Bar -->
+    <!-- Top Announcement Bar -->
     <div class="announcement-bar">
         <marquee behavior="scroll" direction="right" scrollamount="10">
             ADMISSIONS OPEN NOW for 2025-2026
-            <a href="programs.html">Programs Available</a>
+            <a href="#programs">Programs Available</a>
         </marquee>
     </div>
 
     <!-- Navbar -->
     <nav class="navbar">
         <div class="logo">
-            <img src="img/logo.jpg" alt="Suhasa School">
+            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 90'><rect width='120' height='90' fill='%23f0f0f0'/><text x='60' y='45' text-anchor='middle' dy='0.35em' font-family='Arial' font-size='10' fill='%23666'>SUHASA LOGO</text></svg>" alt="Suhasa School">
         </div>
         <button class="menu-toggle" aria-label="Toggle Navigation">
             &#9776;
         </button>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="ourstory.html">About</a></li>
-            <li><a href="programs.html">All Programs</a></li>
-            <li><a href="workshop.html">Workshops</a></li>
-            <li><a href="whyus.html">Suhasa</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#programs">All Programs</a></li>
+            <li><a href="#workshops">Workshops</a></li>
+            <li><a href="#suhasa">Suhasa</a></li>
             
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle">
@@ -462,94 +497,108 @@
                     <span class="dropdown-arrow">&#x25BE;</span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="https://www.facebook.com/share/17yaEL7fqz/?mibextid=wwXIfr">Facebook</a></li>
-                    <li><a href="https://www.instagram.com/suhasaearly.learning">Instagram</a></li>
-                    <li><a href="#">Whatsapp</a></li>
-                    <li><a href="https://maps.app.goo.gl/PTneu3hpB7hNju5o7">Google Maps</a></li>
+                    <li><a href="#facebook">Facebook</a></li>
+                    <li><a href="#instagram">Instagram</a></li>
+                    <li><a href="#whatsapp">Whatsapp</a></li>
+                    <li><a href="#maps">Google Maps</a></li>
                 </ul>
             </li>
             
-            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
         </ul>
     </nav>
 
-     <section class="why-us-section">
-    <h2 class="wyus">SUHASA<br>
-      Early Childhood Learning Center</h2>
-  
-    <!-- Reason 1 -->
-    <div class="why-item">
-      <img src="img/visionimg.jpg" alt="Vibrant Learning Space">
-      <div class="why-content">
-        <h3>Mission</h3>
-        <p class="paragraph">
-          Intentionally building a collaborative learning community while celebrating the strengths of all learners and supporting the growth of early learning skills through developmentally appropriate practices to build a foundation for learning.
+    <section class="why-us-section">
+        <h2 class="wyus">SUHASA<br>Early Childhood Learning Center</h2>
+      
+        <!-- Mission -->
+        <div class="why-item">
+            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 280'><rect width='350' height='280' fill='%23ffeaa7' rx='15'/><text x='175' y='130' text-anchor='middle' dy='0.35em' font-family='Arial' font-size='16' fill='%23666'>Mission Image</text><text x='175' y='150' text-anchor='middle' dy='0.35em' font-family='Arial' font-size='12' fill='%23888'>Vibrant Learning Space</text></svg>" alt="Vibrant Learning Space">
+            <div class="why-content">
+                <h3>Mission</h3>
+                <p class="paragraph">
+                    Intentionally building a collaborative learning community while celebrating the strengths of all learners and supporting the growth of early learning skills through developmentally appropriate practices to build a foundation for learning.
+                </p>
+            </div>
+        </div>
+      
+        <!-- Vision -->
+        <div class="why-item reverse">
+            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 280'><rect width='350' height='280' fill='%23fab1a0' rx='15'/><text x='175' y='130' text-anchor='middle' dy='0.35em' font-family='Arial' font-size='16' fill='%23666'>Vision Image</text><text x='175' y='150' text-anchor='middle' dy='0.35em' font-family='Arial' font-size='12' fill='%23888'>Early Development</text></svg>" alt="Early Development">
+            <div class="why-content">
+                <h3>Vision</h3>
+                <p class="paragraph">
+                    Creating and maintaining a safe, supportive, and nurturing learning environment for all children, families, and staff promoting social/emotional competence as a foundation for developing the whole Child.
+                </p>
+            </div>
+        </div>
+      
+        <!-- Core Values -->
+        <div class="why-item">
+            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 280'><rect width='350' height='280' fill='%2374b9ff' rx='15'/><text x='175' y='130' text-anchor='middle' dy='0.35em' font-family='Arial' font-size='16' fill='%23666'>Core Values</text><text x='175' y='150' text-anchor='middle' dy='0.35em' font-family='Arial' font-size='12' fill='%23888'>Comprehensive Curriculum</text></svg>" alt="Comprehensive Curriculum">
+            <div class="why-content">
+                <h3>Core Values</h3>
+                <ul class="paragraph">
+                    <li>Ongoing Learning</li>
+                    <li>Reflective Practice</li>
+                    <li>Collaboration</li>
+                    <li>Inclusive Environment</li>
+                    <li>Family Involvement</li>
+                </ul>
+            </div>
+        </div>
+      
+        <!-- Safety Meets Discovery -->
+        <div class="why-item reverse">
+            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 280'><rect width='350' height='280' fill='%2355a3ff' rx='15'/><text x='175' y='130' text-anchor='middle' dy='0.35em' font-family='Arial' font-size='16' fill='%23666'>Safety & Discovery</text><text x='175' y='150' text-anchor='middle' dy='0.35em' font-family='Arial' font-size='12' fill='%23888'>Safe Environment</text></svg>" alt="Safe Environment">
+            <div class="why-content">
+                <h3>Where Safety Meets Discovery</h3>
+                <p class="paragraph">
+                    Showcase how your facilities are designed to be both secure and conducive to exploration and learning.
+                </p>
+            </div>
+        </div>
+      
+        <!-- Parental Engagement -->
+        <div class="why-item">
+            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 280'><rect width='350' height='280' fill='%23fd79a8' rx='15'/><text x='175' y='130' text-anchor='middle' dy='0.35em' font-family='Arial' font-size='16' fill='%23666'>Parental Engagement</text><text x='175' y='150' text-anchor='middle' dy='0.35em' font-family='Arial' font-size='12' fill='%23888'>Individual Attention</text></svg>" alt="Individual Attention">
+            <div class="why-content">
+                <h3>Parental Engagement</h3>
+                <p class="paragraph">
+                    Suhasa believes in creating meaningful partnerships between families and educators to support children's development and learning both at school and at home.
+                </p>
+            </div>
+        </div>
+      
+        <!-- Discover, Learn, Connect, Grow -->
+        <div class="why-item reverse">
+            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 280'><rect width='350' height='280' fill='%2300b894' rx='15'/><text x='175' y='120' text-anchor='middle' dy='0.35em' font-family='Arial' font-size='14' fill='%23666'>Discover, Learn,</text><text x='175' y='140' text-anchor='middle' dy='0.35em' font-family='Arial' font-size='14' fill='%23666'>Connect & Grow</text><text x='175' y='160' text-anchor='middle' dy='0.35em' font-family='Arial' font-size='12' fill='%23888'>Parental Involvement</text></svg>" alt="Parental Involvement">
+            <div class="why-content">
+                <h3>Discover, Learn, Connect, and Grow</h3>
+                <p class="paragraph">
+                    Empowering every child to reach their full potential through discovery-based learning, meaningful connections, and continuous growth in a nurturing environment.
+                </p>
+            </div>
+        </div>
+    </section>
 
-        </p>
-      </div>
-    </div>
-  
-    <!-- Reason 2 -->
-    <div class="why-item reverse">
-      <img src="img/missionimage.jpg" alt="Early Development">
-      <div class="why-content">
-        <h3>Vision</h3>
-        <p class="paragraph">
-          Creating and maintaining a safe, supportive, and nurturing learning environment for all children, families, and staff promoting social/emotional competence as a foundation for developing the whole Child.
-
-        </p>
-      </div>
-    </div>
-  
-    <!-- Reason 3 -->
-    <div class="why-item">
-      <img src="img/corevaluesimg.jpg" alt="Comprehensive Curriculum">
-      <div class="why-content">
-          <h3>Core Values</h3>
-          <ul class="paragraph">
-            <li>Ongoing Learning</li>
-            <li>Reflective Practice</li>
-            <li>Collaboration</li>
-            <li>Inclusive Environment</li>
-            <li>Family Involvement</li>
-          </ul>
-      </div>
-    </div>
-  
-    <!-- Reason 4 -->
-    <div class="why-item reverse">
-      <img src="img/safetymeetsimg.jpg" alt="Safe Environment">
-      <div class="why-content">
-        <h3>Where Safety Meets Discovery</h3>
-        <p class="paragraph">
-          Showcase how your facilities are designed to be both secure and conducive to exploration and learning.
-        </p>
-      </div>
-    </div>
-  
-    <!-- Reason 5 -->
-    <div class="why-item">
-      <img src="img/baby2.jpg" alt="Individual Attention">
-      <div class="why-content">
-        <h3>Parental Engagement</h3>
-        <p class="paragraph">
-            Suhasa believes in creating meaningful partnerships between families and educators to support children's development and learning both at school and at home.
-        </p>
-      </div>
-    </div>
-  
-    <!-- Reason 6 -->
-    <div class="why-item reverse">
-      <img src="img/suhasa7.jpg" alt="Parental Involvement">
-      <div class="why-content">
-        <h3> Discover ,Learn, Connect, and Grow</h3>
-        <p class="paragraph">Empowering every child to reach their full potential through discovery-based learning, meaningful connections, and continuous growth in a nurturing environment.</p>
-      </div>
-    </div>
-  </section>
-
-  <script>
+    <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Add loading class initially
+            document.body.classList.add('font-loading');
+            
+            // Remove loading class after fonts are loaded
+            if (document.fonts) {
+                document.fonts.ready.then(() => {
+                    document.body.classList.remove('font-loading');
+                });
+            } else {
+                // Fallback for older browsers
+                setTimeout(() => {
+                    document.body.classList.remove('font-loading');
+                }, 3000);
+            }
+
             const menuToggle = document.querySelector('.menu-toggle');
             const navLinks = document.querySelector('.nav-links');
             const dropdowns = document.querySelectorAll('.dropdown');
@@ -558,7 +607,6 @@
             if (menuToggle && navLinks) {
                 menuToggle.addEventListener('click', () => {
                     navLinks.classList.toggle('active');
-                    console.log('Menu toggled, active class:', navLinks.classList.contains('active'));
                 });
             }
 
@@ -596,11 +644,12 @@
             const regularLinks = document.querySelectorAll('.nav-links > li > a:not(.dropdown-toggle)');
             regularLinks.forEach(link => {
                 link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
+                    if (navLinks) {
+                        navLinks.classList.remove('active');
+                    }
                 });
             });
         });
     </script>
-
 </body>
 </html>
