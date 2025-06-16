@@ -87,15 +87,44 @@
     </style>
 
     <script>
-        // Load navbar dynamically
-        document.addEventListener("DOMContentLoaded", () => {
-            fetch('navbar.html')
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById('navbar-container').innerHTML = html;
-                })
-                .catch(error => console.error('Error loading navbar:', error));
-        });
+
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('navbar-container').innerHTML = html;
+            
+            // Initialize menu toggle after navbar is loaded
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    navLinks.classList.toggle('active');
+                });
+                
+                // Close menu when clicking on links (mobile)
+                navLinks.addEventListener('click', (e) => {
+                    if (e.target.tagName === 'A' && !e.target.closest('.dropdown')) {
+                        navLinks.classList.remove('active');
+                    }
+                });
+                
+                // Handle dropdown clicks on mobile
+                const dropdowns = document.querySelectorAll('.dropdown > a');
+                dropdowns.forEach(dropdown => {
+                    dropdown.addEventListener('click', (e) => {
+                        if (window.innerWidth <= 767) {
+                            e.preventDefault();
+                            const parent = dropdown.parentElement;
+                            parent.classList.toggle('active');
+                        }
+                    });
+                });
+            }
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+  
     </script>
 
 </head>
