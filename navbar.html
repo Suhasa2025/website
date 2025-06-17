@@ -219,10 +219,13 @@
 <body>
     <!-- Top Announcement Bar -->
     <div class="announcement-bar">
-        <marquee behavior="scroll" direction="right" scrollamount="7">
-            ADMISSIONS OPEN NOW for 2025-2026
-            <a href="programs.html">Programs Available</a>
-        </marquee>
+      <marquee behavior="scroll" direction="right" id="admission-marquee">
+        ADMISSIONS OPEN NOW for 2025-2026 
+        <a href="programs.html" onmouseover="document.getElementById('admission-marquee').stop();" 
+           onmouseout="document.getElementById('admission-marquee').start();">
+          <span>Programs Available</span>
+        </a>
+      </marquee>
     </div>
 
     <!-- Navbar -->
